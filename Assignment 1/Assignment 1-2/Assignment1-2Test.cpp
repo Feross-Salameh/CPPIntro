@@ -9,6 +9,7 @@ using namespace std;
 //	read and write a string
 //Initialize a stringstream with the "Hello".Attempt to stream this value into an int variable.Write a check that verifies this fails.
 //Be sure to use CHECK_DOUBLES_EQUAL for float types and CHECK_EQUAL for other types.
+
 TEST(Assignment1Part2, Double)
 {
 	stringstream ss;
