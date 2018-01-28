@@ -1,6 +1,5 @@
 #include "TestHarness.h"
 #include <iostream>
-#include <vector>
 
 using namespace std;
 //Write a CppUnitLite test that uses new to allocate an array of 10 integers.
@@ -9,7 +8,7 @@ using namespace std;
 TEST(Assignment1Part3, array)
 {
 	// Array to use for testing
-	auto ints = new int(10);
+	int *ints = new int[10];
 
 	// setting up array using for loop
 	for (int i = 0; i < 10; ++i)
@@ -19,8 +18,7 @@ TEST(Assignment1Part3, array)
 	for (int i = 0; i < 10; ++i)
 		CHECK_EQUAL(i, ints[i]);
 
-	// NOTE: for some reason when I try to delete the array the heap becomes corrupted on my computer.
 	// deleting array:
-	//delete [] ints;
-
+	delete[] ints;
+	ints = NULL;
 }
