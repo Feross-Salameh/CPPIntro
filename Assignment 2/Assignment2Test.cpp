@@ -1,7 +1,7 @@
 #include "TestHarness.h"
 #include <string>
 #include <iostream>
-
+#include <cstring>
 using namespace std;
 // Rename this file to match the functionality under test. E.g., StringTest.
 // Add tests and CHECKs as required
@@ -96,12 +96,44 @@ TEST(Assignment2, Part2)
 
 }
 
-
-char* CatPtr(char* a, char* b)
+// takes 2 pointers and their length to create a new char pointer
+char* CatPtr(char* a, int lenA, char* b, int lenB)
 {
 
+	int lenTotal = lenA + lenB; // storing length of 
+	char *cat = new char[lenTotal]; // creating new char* to store concatenated string.
+	for (int i = 0; i < lenA; i++) // adding first char*
+		cat[i] = a[i];
+	for (int i = 0; i < lenB; i++) // adding second char*
+		cat[i + lenA] = b[i];
+	cat[lenTotal] = '\0'; // end char with nul terminating character. seems like without this there is gargabe at the end.
+	return cat;
 }
-TEST(Assignment3, Part3)
-{
 
+// takes in 2 string and return new string.....Pretty Simple
+string CatStr(const string& a,const string& b) { return a + b; }
+TEST(Assignment2, Part3)
+{
+	char a[] = "Hello ";
+	char b[] = "World!";
+	// for this test I assume you didn't want u to use strcat
+	auto ab = CatPtr(a, 6, b, 6);
+
+	cout << ab << endl; // using print as another check...
+
+	CHECK_EQUAL('H', ab[0]);
+	CHECK_EQUAL('o', ab[7]);
+	// creating strings for part 3
+	string hel = "Hello ";
+	string wor = "World!";
+	auto helwor = CatStr(hel, wor);
+
+	CHECK_EQUAL("Hello World!", helwor);
+
+	/// Part 3 better approach:
+	/*
+		In my opinion, the second apporach is a better option. For one, the code for the cat function is much simpler using strings
+		because of the built in functions. Since std::strings are part of the standard library they also get the benifit of fitting into other
+		standard library functions as well. Using char * in C++ doesn't really seem like a good idea anymore.
+	*/
 }
