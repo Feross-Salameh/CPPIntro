@@ -121,7 +121,8 @@
     <ClCompile Include="..\Test.cpp" />
     <ClCompile Include="..\TestRegistry.cpp" />
     <ClCompile Include="..\TestResult.cpp" />
-    <ClCompile Include="..\XxxTest.cpp" />
+    <ClCompile Include="..\Part1-2-3-4Test.cpp" />
+    <ClCompile Include="write.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Failure.h" />
@@ -129,6 +130,7 @@
     <ClInclude Include="..\TestHarness.h" />
     <ClInclude Include="..\TestRegistry.h" />
     <ClInclude Include="..\TestResult.h" />
+    <ClInclude Include="write.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

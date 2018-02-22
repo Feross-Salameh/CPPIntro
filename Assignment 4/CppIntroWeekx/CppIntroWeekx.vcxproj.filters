@@ -30,7 +30,10 @@
     <ClCompile Include="..\TestResult.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\XxxTest.cpp">
+    <ClCompile Include="write.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Part1-2-3-4Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\TestResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="write.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
