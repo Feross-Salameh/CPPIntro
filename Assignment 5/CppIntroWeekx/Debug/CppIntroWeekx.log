@@ -1,2 +1,2 @@
-﻿  CharQueue1.cpp
-c:\users\feros\documents\github\cppintro\assignment 5\cppintroweekx\charqueue1.cpp(27): error C2600: 'CharQueue1::~CharQueue1': cannot define a compiler-generated special member function (must be declared in the class first)
+﻿  CharQueueTest.cpp
+  CppIntroWeekx.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\Assignment 5\Debug\Assignment 5.exe

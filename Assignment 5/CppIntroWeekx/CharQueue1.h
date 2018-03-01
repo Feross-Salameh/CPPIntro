@@ -20,7 +20,7 @@ public:
 	CharQueue1& operator=(CharQueue1 src);
 private:
 	size_t mySize;
-	int myIndex;
-	std::unique_ptr<char[]> myArray;
+	unsigned int myIndex;
+	std::unique_ptr<char[]> myArray; // using unique_ptr is probably not the best way of doing things (since copying is involved), but I wanted to try it out for now.
 
 };
