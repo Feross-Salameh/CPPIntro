@@ -30,7 +30,7 @@ void CharQueue1::enqueue(char ch)
 	// if we need to create a bigger array:
 	if (myIndex == mySize)
 	{
-		auto temp = std::make_unique<char[]>(++mySize);
+		auto temp = std::make_unique<char[]>(++mySize); // I'm assuming make_unique uses new???
 		for (unsigned int i = 0; i < myIndex; i++)
 			temp.get()[i] = myArray.get()[i];
 		myArray = std::move(temp);
@@ -38,11 +38,18 @@ void CharQueue1::enqueue(char ch)
 	
 }
 
+// the time complexity for this O(n). I can make it constant time by using a circular queue, 
+// but the requirements didn't ask for it.
 char CharQueue1::dequeue()
 {
-	if(!isEmpty())
-		return myArray.get()[--myIndex];
-	return '\0';
+	if(isEmpty())
+		return '\0';
+	auto tmp = myArray.get()[0];
+	for (int i = 1; i <= myIndex; i++)
+		myArray.get()[i - 1] = myArray.get()[i];
+	myIndex--;
+	return tmp;
+	
 }
 
 bool CharQueue1::isEmpty() const
