@@ -1,11 +1,2 @@
-﻿  ArduinoInterface.cpp
-  Failure.cpp
-  ICode.cpp
-  IHardware.cpp
-  IRCode.cpp
-  Main.cpp
-  Test.cpp
-  TestRegistry.cpp
-  TestResult.cpp
-  Generating Code...
+﻿  ArduinoTest.cpp
   IRFramework.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\Project\IRFramework\Debug\IRFramework.exe

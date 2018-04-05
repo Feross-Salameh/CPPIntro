@@ -20,8 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArduinoInterface.cpp" />
+    <ClCompile Include="ArduinoTest.cpp" />
+    <ClCompile Include="DatabaseInterface.cpp" />
     <ClCompile Include="Failure.cpp" />
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="GUI.cpp" />
     <ClCompile Include="ICode.cpp" />
+    <ClCompile Include="ICodeTest.cpp" />
     <ClCompile Include="IHardware.cpp" />
     <ClCompile Include="IRCode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -31,7 +36,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArduinoInterface.h" />
+    <ClInclude Include="DatabaseInterface.h" />
     <ClInclude Include="Failure.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="ICode.h" />
     <ClInclude Include="IHardware.h" />
     <ClInclude Include="IRCode.h" />
