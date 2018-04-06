@@ -24,6 +24,7 @@
     <ClCompile Include="DatabaseInterface.cpp" />
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="FrameWorkTest.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="ICode.cpp" />
     <ClCompile Include="ICodeTest.cpp" />

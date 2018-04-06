@@ -13,6 +13,13 @@ ICode::ICode(unsigned char data[], size_t size, const std::string& device, const
 	}
 }
 
+//Last minute add, realized the code would need a name.
+ICode::ICode(unsigned char data[], size_t size, const std::string & device, const double & wait, std::string name) : 
+	ICode(data, size, device, wait)
+{
+	Name = name;
+}
+
 const unsigned char* ICode::getData() const
 {
 	return (*this).myData.get()->data();
@@ -26,4 +33,54 @@ const std::string ICode::getDevice() const
 const double ICode::getWait() const
 {
 	return this->myWait;
+}
+
+bool ICode::setData(unsigned char data[], size_t size)
+{
+	try
+	{
+		this->myData.reset();
+		this->myData = std::make_unique<std::vector<unsigned char>>();
+
+		for (size_t i = 0; i < size; i++)
+		{
+			myData->push_back(data[i]);
+		}
+	}
+	catch (const std::exception&) // any exceptions, return false;
+	{
+		return false;
+	}
+	return true;
+}
+
+bool ICode::setDevice(const std::string & name)
+{
+	try
+	{
+		if (trim_copy(name) == "") // don't want an empty name...
+			return false;
+		this->myDevice = name;
+	}
+	catch (const std::exception&)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool ICode::setWait(const double & time)
+{
+	try
+	{
+		if (time < 0)
+			return false;
+		this->myWait = time;
+	}
+	catch (const std::exception&)
+	{
+		return false;
+	}
+	return true;
 }

@@ -2,6 +2,7 @@
 #include "IHardware.h"
 #include "Header.h"
 #include "IRCode.h"
+#include "ICode.h"
 
 /*
 	References to how to interact with arduino:
@@ -14,6 +15,7 @@ class ArduinoInterface :
 	public IHardware
 {
 public:
+	ArduinoInterface();
 	ArduinoInterface(const std::string& port);
 	~ArduinoInterface(); // make sure we cleanup the connection before we close it for good.
 	virtual bool Connect(std::string &error);

@@ -2,6 +2,10 @@
 
 using namespace std;
 
+ArduinoInterface::ArduinoInterface() : ArduinoInterface("\\\\.\\COM5") // default
+{
+}
+
 ArduinoInterface::ArduinoInterface(const std::string & port) : IHardware("ARDUINO", port)
 {
 	this->Connect(myStatus);
@@ -65,7 +69,7 @@ bool ArduinoInterface::Reset(std::string & error)
 
 }
 
-bool ArduinoInterface::Send(ICode &code, std::string & error)
+bool ArduinoInterface::Send(ICode & code, std::string & error)
 {
 	try
 	{
