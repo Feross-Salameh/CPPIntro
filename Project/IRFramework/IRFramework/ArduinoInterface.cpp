@@ -79,7 +79,7 @@ bool ArduinoInterface::Send(ICode & code, std::string & error)
 		if (irc == nullptr)
 		{
 			error = "Arduino Interface: incorrect code given";
-			throw new exception;
+			return false;
 		}
 		// TODO: fill in rest of disconnection logic
 

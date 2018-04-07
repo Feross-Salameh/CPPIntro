@@ -4,6 +4,7 @@
 class ICode
 {
 public:
+	ICode();
 	ICode(unsigned char data[], size_t size, const std::string& device, const double& wait);
 	ICode(unsigned char data[], size_t size, const std::string& device, const double& wait, std::string name);
 	// gertters 

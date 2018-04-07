@@ -20,6 +20,11 @@ ICode::ICode(unsigned char data[], size_t size, const std::string & device, cons
 	Name = name;
 }
 
+ICode::ICode() : ICode({0}, 0, "NO DEVICE", 0)
+{
+
+}
+
 const unsigned char* ICode::getData() const
 {
 	return (*this).myData.get()->data();
@@ -84,3 +89,4 @@ bool ICode::setWait(const double & time)
 	}
 	return true;
 }
+

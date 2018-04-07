@@ -40,7 +40,7 @@ void Framework::CallCode(std::string name)
 {
 	// TODO: fully implement when database is setup and multiple interfaces feature implemented.
 
-	ICode code();
+	ICode code = ICode();
 	myStorage.retrieveCode(name, code);
 
 	std::string error; 

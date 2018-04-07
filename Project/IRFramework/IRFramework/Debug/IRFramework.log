@@ -1,3 +1,2 @@
-﻿  Framework.cpp
-c:\users\feros\onedrive\documents\github\cppintro\project\irframework\irframework\framework.cpp(44): error C2664: 'bool DatabaseInterface::retrieveCode(std::string,ICode &)': cannot convert argument 2 from 'ICode (__cdecl *)(void)' to 'ICode &'
-c:\users\feros\onedrive\documents\github\cppintro\project\irframework\irframework\framework.cpp(47): error C2664: 'bool ArduinoInterface::Send(ICode &,std::string &)': cannot convert argument 1 from 'ICode (__cdecl *)(void)' to 'ICode &'
+﻿  ArduinoInterface.cpp
+  IRFramework.vcxproj -> C:\Users\feros\Documents\GitHub\CPPIntro\Project\IRFramework\Debug\IRFramework.exe
