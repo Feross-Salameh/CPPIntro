@@ -2,7 +2,8 @@
 #include <iostream>
 #include "Circle.h"
 
-const int kMaxNameSize = 128;
+const int kMaxNameSize = 128;
+
 using namespace std;
 
 void CreateTwoCircles()
