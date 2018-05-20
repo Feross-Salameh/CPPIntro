@@ -2,7 +2,7 @@
 #include <stack>
 #include <map>
 #include <string>
-
+#include <algorithm>
 
 using namespace std;
 
@@ -20,10 +20,14 @@ bool checkParanthesis(const string& input)
 	// now we can iteratore through string.
 	for (auto c : input)
 	{
-		auto pair = dict.find(c);
-		if (pair == dict.end()) // we don't care if the current character is not a paranthesis 
-				continue;
-		if (pair->first == c) // value is key (opening paranthesis) we should just push onto the stack
+		auto it = find_if(dict.begin(), dict.end(), 
+			[c](pair<char, char> t) -> bool
+			{
+				return (t.first == c) || (t.second == c);
+			});
+		if (it == dict.end())
+			continue;
+		if (it->first == c) // value is key (opening paranthesis) we should just push onto the stack
 			parans.push(c);
 		else
 		{
@@ -31,7 +35,7 @@ bool checkParanthesis(const string& input)
 			if (parans.empty())
 				return false;
 			// now we will check if it's matching,
-			if (pair->second == parans.top()) // if true, continue with operation
+			if (it->second == dict[parans.top()]) // if true, continue with operation
 				parans.pop();
 			else // if not mathing, input is not setup correctly.
 				return false;
