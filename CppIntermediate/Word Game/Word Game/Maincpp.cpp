@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Dictionary.h"
-
+#include "WordFinder.h"
 int main()
 {
-	Dictionary dict;
+	WordFinder myFinder;
 
 	return 0;
 }

@@ -6,44 +6,29 @@
 	If not, constructor will throw an error
 */
 Dictionary::Dictionary()
-	: root(new Node(nullptr, "1ROOT")) // added 1 at begnning of word to know if root node.
+	: root(list<string>()) 
 {
 
 	ifstream wordFile;
-	wordFile.open("WordsList.txt");
+	wordFile.open("WordsList.txt"); 
 	if (!wordFile.is_open())
 		throw new exception("Could Not Find WordsList.txt");
 	string word;
-	wordFile >> word;
-	// setting up loop
-	Node* parent = root.get(); // this is generally forwned upon, but will be needed in loop
-	stack<Node *> nodes;
-	Node* temp = new Node(parent, word);
-
-	nodes.push(parent);
-	parent->myChildren.push_back(temp);
-	nodes.push(temp);
+	cout << "starting word extraction from txt file..";
 	while (wordFile >> word)
-	{
-		Node * temp = new Node(nodes.top(), word);
-		
-		if (nodes.top()->myWord == "1ROOT") // if at root in stack:
-		{
-			nodes.top()->myChildren.push_back(temp);
-			nodes.push(temp);
-			continue;
-		}
-		while (temp->myWord.find(nodes.top()->myWord) != string::npos)
-		{
-			nodes.pop();
-		}
-
-	}
-
+		root.push_back(word);
+	cout << "don." << endl;
+	cout << "Starting sort...";
+	root.sort(); // I think this is unnessessary due to list being in order, but if given an unsorted list this will solve that edge case.
+	cout << "done." << endl;
 	wordFile.close();
+	cout << "File closed." << endl;
 }
 
 bool Dictionary::contains(const string word) const
-{
-	return false;
+{	
+	return lower_bound(root.begin(), root.end(), word, [](string lhs, string rhs) -> bool // using lower bound for O(logn) time complexity
+	{ 
+		return lhs < rhs;  
+	}) != root.end();
 }
