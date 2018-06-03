@@ -1,4 +1,3 @@
-﻿  Maincpp.cpp
-  WordFinder.cpp
-  Generating Code...
-  Word Game.vcxproj -> C:\Users\feros\Documents\GitHub\CPPIntro\CppIntermediate\Word Game\Debug\Word Game.exe
+﻿  WordGame.cpp
+c:\users\feros\onedrive\documents\github\cppintro\cppintermediate\word game\word game\wordgame.cpp(34): warning C4018: '>': signed/unsigned mismatch
+  Word Game.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\CppIntermediate\Word Game\Debug\Word Game.exe

@@ -16,7 +16,8 @@ class Dictionary
 {
 public:
 	Dictionary();
-	bool contains(const string word) const;
+	bool contains(const string& word) const;
+	bool has(const string& word) const;
 private:
 	list<string> root; // a list has a more optimal insert than vector
 
