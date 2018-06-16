@@ -2,6 +2,7 @@
 #include <iostream>
 #include <deque>
 #include <vector>
+#include <list>
 #include "MyQueue.h"
 
 
@@ -9,11 +10,15 @@ using namespace std;
 
 int main()
 {
-	MyQueueC<deque<int>> q1;
-	MyQueueC<vector<double>> q2;
-	//q1.Push(5);
-	//q1.Push(10);
-	//q1.Pop();
+	MyQueue< vector<double> > q2;
+	MyQueue< deque<double> > qi;
+	MyQueue< deque<string> > qs;
+	MyQueue< list<int> > qli;
+
+
+	qi.Push(5);
+	qi.Push(10);
+	qi.Pop();
 	cout << "Press any key to continue..." << endl;
 	cin;
 	return 0;
