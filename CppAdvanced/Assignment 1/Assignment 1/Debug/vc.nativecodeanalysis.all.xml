@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\cppunitlite\</FILEPATH>
+      <FILENAME>testresult.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>TestResult::{ctor}</FUNCTION>
+    <DECORATED>??0TestResult@@QAE@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointPropertiesTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointPropertiesTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointcopyTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointcopyTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>26</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointmoveTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointmoveTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>26</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointequalityTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointequalityTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>42</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointinequalityTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointinequalityTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>pointtest.cpp</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>PointconstexprPointTest::{ctor}</FUNCTION>
+    <DECORATED>??0PointconstexprPointTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphic.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VG::VectorGraphic::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphic@VG@@QAE@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphic.cpp</FILENAME>
+      <LINE>20</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>VG::VectorGraphic::removePoint</FUNCTION>
+    <DECORATED>?removePoint@VectorGraphic@VG@@QAEXABVPoint@2@@Z</DECORATED>
+    <FUNCLINE>14</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphic.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26444</DEFECTCODE>
+    <DESCRIPTION>Avoid unnamed objects with custom construction and destruction (es.84).</DESCRIPTION>
+    <FUNCTION>VG::VectorGraphic::erasePoint</FUNCTION>
+    <DECORATED>?erasePoint@VectorGraphic@VG@@QAEXH@Z</DECORATED>
+    <FUNCLINE>26</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicIsOpenPropertyTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicIsOpenPropertyTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>18</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicInsertTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicInsertTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>18</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicModifyPointsTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicModifyPointsTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>44</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicPointCountTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicPointCountTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>44</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>66</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicHeightTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicHeightTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>66</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>76</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicWidthTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicWidthTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>76</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>89</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicctorTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicctorTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>89</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>97</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicinsertPointTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicinsertPointTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>97</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>107</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicremovePointTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicremovePointTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>107</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>118</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicerasePointTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicerasePointTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>118</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicerasePointOutOfRangeTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicerasePointOutOfRangeTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>150</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicequalityTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicequalityTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>150</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>165</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicinequalityTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicinequalityTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>165</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>188</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphiccloseShapeTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphiccloseShapeTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>188</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>196</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicopenShapeTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicopenShapeTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>196</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 1\assignment 1\</FILEPATH>
+      <FILENAME>vectorgraphictest.cpp</FILENAME>
+      <LINE>204</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>VectorGraphicwidthHeightTest::{ctor}</FUNCTION>
+    <DECORATED>??0VectorGraphicwidthHeightTest@@QAE@XZ</DECORATED>
+    <FUNCLINE>204</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>
