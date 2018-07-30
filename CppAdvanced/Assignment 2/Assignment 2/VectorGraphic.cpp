@@ -10,6 +10,10 @@ void VG::VectorGraphic::addPoint(const Point & p)
 {
 	myPath.push_back(p);
 }
+void VG::VectorGraphic::addPoint(Point && p)
+{
+	myPath.emplace_back(std::forward<Point>(p));
+}
 // Removes p object from mypath.
 void VG::VectorGraphic::removePoint(const Point & p)
 { // this is really just a guess on what this function should do. I couldn't really figure out a good sense for it.
