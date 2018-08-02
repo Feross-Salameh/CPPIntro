@@ -1,4 +1,16 @@
 ﻿  PlacedGraphic.cpp
-  VectorGraphic.cpp
+  PlacedGraphicTest.cpp
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphictest.cpp(22): error C2280: 'VG::PlacedGraphic::PlacedGraphic(const VG::PlacedGraphic &)': attempting to reference a deleted function
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphic.h(17): note: see declaration of 'VG::PlacedGraphic::PlacedGraphic'
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphic.h(17): note: 'VG::PlacedGraphic::PlacedGraphic(const VG::PlacedGraphic &)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'std::unique_ptr<VG::VectorGraphic,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)'
+          with
+          [
+              _Ty=VG::VectorGraphic
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\memory(2308): note: 'std::unique_ptr<VG::VectorGraphic,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)': function was explicitly deleted
+          with
+          [
+              _Ty=VG::VectorGraphic
+          ]
+  VectorGraphicTest.cpp
   Generating Code...
-  Assignment 2.vcxproj -> C:\Users\feros\Documents\GitHub\CPPIntro\CppAdvanced\Assignment 2\Debug\Assignment 2.exe

@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\CppUnitLite\Failure.cpp">
+    <ClCompile Include="..\..\CppUnitLite\Failure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CppUnitLite\Main.cpp">
+    <ClCompile Include="..\..\CppUnitLite\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CppUnitLite\Test.cpp">
+    <ClCompile Include="..\..\CppUnitLite\Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CppUnitLite\TestRegistry.cpp">
+    <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\CppUnitLite\TestResult.cpp">
+    <ClCompile Include="..\..\CppUnitLite\TestResult.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Point.cpp">
@@ -36,39 +36,36 @@
     <ClCompile Include="VectorGraphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\tinyxml2\tinyxml2.cpp">
+    <ClCompile Include="PlacedGraphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlacedGraphic.cpp">
+    <ClCompile Include="VectorGraphicTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlacedGraphicTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\CppUnitLite\Failure.h">
+    <ClInclude Include="..\..\CppUnitLite\Failure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CppUnitLite\Test.h">
+    <ClInclude Include="..\..\CppUnitLite\Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CppUnitLite\TestHarness.h">
+    <ClInclude Include="..\..\CppUnitLite\TestHarness.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CppUnitLite\TestRegistry.h">
+    <ClInclude Include="..\..\CppUnitLite\TestRegistry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\CppUnitLite\TestResult.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FS_GenLib.h">
+    <ClInclude Include="..\..\CppUnitLite\TestResult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VectorGraphic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\tinyxml2\tinyxml2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PlacedGraphic.h">

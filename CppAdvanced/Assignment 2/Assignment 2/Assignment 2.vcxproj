@@ -18,6 +18,28 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\CppUnitLite\Failure.cpp" />
+    <ClCompile Include="..\..\CppUnitLite\Main.cpp" />
+    <ClCompile Include="..\..\CppUnitLite\Test.cpp" />
+    <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
+    <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
+    <ClCompile Include="PlacedGraphic.cpp" />
+    <ClCompile Include="PlacedGraphicTest.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="VectorGraphic.cpp" />
+    <ClCompile Include="VectorGraphicTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\CppUnitLite\Failure.h" />
+    <ClInclude Include="..\..\CppUnitLite\Test.h" />
+    <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
+    <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
+    <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
+    <ClInclude Include="PlacedGraphic.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="VectorGraphic.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{67E25275-67D4-4060-8868-0F0AED91F211}</ProjectGuid>
@@ -115,29 +137,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\tinyxml2\tinyxml2.cpp" />
-    <ClCompile Include="..\..\..\CppUnitLite\Failure.cpp" />
-    <ClCompile Include="..\..\..\CppUnitLite\Main.cpp" />
-    <ClCompile Include="..\..\..\CppUnitLite\Test.cpp" />
-    <ClCompile Include="..\..\..\CppUnitLite\TestRegistry.cpp" />
-    <ClCompile Include="..\..\..\CppUnitLite\TestResult.cpp" />
-    <ClCompile Include="PlacedGraphic.cpp" />
-    <ClCompile Include="Point.cpp" />
-    <ClCompile Include="VectorGraphic.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\tinyxml2\tinyxml2.h" />
-    <ClInclude Include="..\..\..\CppUnitLite\Failure.h" />
-    <ClInclude Include="..\..\..\CppUnitLite\Test.h" />
-    <ClInclude Include="..\..\..\CppUnitLite\TestHarness.h" />
-    <ClInclude Include="..\..\..\CppUnitLite\TestRegistry.h" />
-    <ClInclude Include="..\..\..\CppUnitLite\TestResult.h" />
-    <ClInclude Include="FS_GenLib.h" />
-    <ClInclude Include="PlacedGraphic.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="VectorGraphic.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

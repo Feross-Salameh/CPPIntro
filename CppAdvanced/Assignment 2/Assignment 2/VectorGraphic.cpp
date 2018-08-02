@@ -1,128 +1,110 @@
 #include "VectorGraphic.h"
 
+#include <algorithm>
 
-
-VG::VectorGraphic::VectorGraphic() : myPath{std::vector<Point>()}, IsOpen(false)
+namespace VG
 {
-}
-
-void VG::VectorGraphic::addPoint(const Point & p)
-{
-	myPath.push_back(p);
-}
-void VG::VectorGraphic::addPoint(Point && p)
-{
-	myPath.emplace_back(std::forward<Point>(p));
-}
-// Removes p object from mypath.
-void VG::VectorGraphic::removePoint(const Point & p)
-{ // this is really just a guess on what this function should do. I couldn't really figure out a good sense for it.
-	for (size_t i = 0; i < myPath.size(); i++)
+    VectorGraphic::VectorGraphic() :
+    myShapeStyle{ShapeStyle::Closed}
+    {
+    }
+    
+    bool VectorGraphic::isOpen() const
+    {
+        return myShapeStyle == ShapeStyle::Open;
+    }
+    
+    bool VectorGraphic::isClosed() const
+    {
+        return myShapeStyle == ShapeStyle::Closed;
+    }
+    
+    void VectorGraphic::openShape()
+    {
+        myShapeStyle = ShapeStyle::Open;
+    }
+    
+    void VectorGraphic::closeShape()
+    {
+        myShapeStyle = ShapeStyle::Closed;
+    }
+    
+    int VectorGraphic::getWidth() const
+    {
+		// returns iterators to the min and max element as a std::pair
+		// uses the structured binding to make the access a little more clean
+		auto [minIt, maxIt] =std::minmax_element(myPath.cbegin(), myPath.cend(),
+			[](Point const& lhs, Point const& rhs) {return lhs.getX() < rhs.getX();  });        
+        
+        return myPath.size() > 0 ? maxIt->getX() - minIt->getX() : 0;
+    }
+    
+    int VectorGraphic::getHeight() const
+    {
+		auto[minIt, maxIt] = std::minmax_element(myPath.cbegin(), myPath.cend(),
+			[](Point const& lhs, Point const& rhs) {return lhs.getY() < rhs.getY();  });
+        
+		return myPath.size() > 0 ? maxIt->getY() - minIt->getY() : 0;
+    }
+    
+    size_t VectorGraphic::getPointCount() const
+    {
+        return myPath.size();
+    }
+    
+    void VectorGraphic::addPoint(const Point& p)
+    {
+        myPath.push_back(p);
+    }
+    
+	void VectorGraphic::addPoint(Point&& p)
 	{
-		if (myPath[i] == p) // if both pointers POINT to the same object.
+		myPath.emplace_back(std::forward<Point>(p));
+	}
+
+    const Point& VectorGraphic::getPoint(int index) const
+    {	
+        return myPath.at(index); // throws std::out_of_range if index out of range
+    }
+    
+    void VectorGraphic::removePoint(const Point& p)
+    {
+		auto newEnd = std::remove(myPath.begin(), myPath.end(), p);
+
+		if (newEnd == myPath.end())
 		{
-			myPath.erase(myPath.begin() + i);
-			--i;
+			throw std::invalid_argument("the point to remove does not appear in the vectorgraphic.");
 		}
-	}
-}
-// Removes point from vector using index.
-void VG::VectorGraphic::erasePoint(int index)
-{
-	if (index < 0)
-		throw std::out_of_range("Error in erasePoint: passed index is negative number");
-	else if ((size_t)index >= myPath.size())
-		throw std::out_of_range("Error in erasePoint: index outside bounds of the array");
-	myPath.erase(myPath.begin() + index);
-}
 
-void VG::VectorGraphic::openShape()
-{
-	IsOpen = true;
-}
-
-void VG::VectorGraphic::closeShape()
-{
-	IsOpen = false;
-}
-
-bool VG::VectorGraphic::isOpen() const
-{
-	return IsOpen;
-}
-
-bool VG::VectorGraphic::isClosed() const
-{
-	return !IsOpen;
-}
-
-// returns largest difference of width of vector graphic
-int VG::VectorGraphic::getWidth() const
-{
-	int smallest = INT_MAX, largest = INT_MIN;
-
-	for (auto p : myPath)
+        myPath.erase(newEnd, myPath.end());
+    }
+    
+    void VectorGraphic::erasePoint(int index)
+    {
+        if (index >= 0 && static_cast<std::size_t>(index) < myPath.size())
+        {
+            auto pos = myPath.begin() + index;
+            myPath.erase(pos);
+        }
+        else
+        {
+            throw std::out_of_range{"index out of range"};
+        }
+    }
+    
+    bool VectorGraphic::operator==(const VectorGraphic& rhs) const
+    {
+        return (myPath == rhs.myPath) && (myShapeStyle == rhs.myShapeStyle);
+    }
+    
+    bool VectorGraphic::operator!=(const VectorGraphic& rhs) const
+    {
+        return ! (*this == rhs);
+    }
+	std::ostream & operator<<(std::ostream & os, const VectorGraphic & p)
 	{
-		if (p.getX() > largest)
-			largest = p.getX();
-		if (p.getX() < smallest)
-			smallest = p.getX();
+		for (size_t i = 0; i < p.getPointCount(); ++i)
+			os << p.getPoint(i);
+		return os;
 	}
-	if (smallest > largest) // this is here in case there are no points to compare.
-		return -1;
-	return largest - smallest;
 }
-
-// return lagest difference of height of vector graphic
-int VG::VectorGraphic::getHeight() const
-{
-
-	int smallest = INT_MAX, largest = INT_MIN;
-
-	for (auto p : myPath)
-	{
-		if (p.getY() > largest)
-			largest = p.getY();
-		if (p.getY() < smallest)
-			smallest = p.getY();
-	}
-	if (smallest > largest) // this is here in case there are no points to compare.
-		return -1;
-	return largest - smallest;
-}
-
-int VG::VectorGraphic::getPointCount() const
-{
-	return myPath.size();
-}
-
-VG::Point VG::VectorGraphic::getPoint(int index) const
-{
-	if (index < 0)
-		throw std::out_of_range("Error in getPoint: passed index is negative number");
-	else if ((size_t)index >= myPath.size())
-		throw std::out_of_range("Error in getPoint: index outside bounds of the array");
-	return myPath[index];
-}
-
-bool VG::VectorGraphic::operator==(const VectorGraphic & rhs)
-{
-	if (IsOpen != rhs.IsOpen)
-		return false;
-	if (myPath.size() != rhs.myPath.size())
-		return false;
-	for (size_t i = 0; i < myPath.size(); i++)
-	{
-		if (myPath[i] != rhs.myPath[i])
-			return false;
-	}
-	return true;
-}
-
-bool VG::VectorGraphic::operator!=(const VectorGraphic & rhs)
-{
-	return !(*this == rhs);
-}
-
-
-

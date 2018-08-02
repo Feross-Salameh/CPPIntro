@@ -1,31 +1,23 @@
 #include "Point.h"
-using namespace VG;
+#include <iostream>
 
-//constexpr Point::Point(int x, int y) : MyX{ x }, MyY{ y }
-//{
-//}
-//
-//constexpr int Point::getX() const
-//{
-//	return MyX;
-//}
-//
-//constexpr int Point::getY() const
-//{
-//	return MyY;
-//}
-//
-bool VG::Point::operator==(const Point & rhs)
+namespace VG
 {
-	return (x == rhs.x)&&(y == rhs.y);
-}
-
-bool VG::Point::operator!=(const Point & rhs)
-{
-	return !(*this == rhs);
-}
-
-std::ostream & VG::operator<<(std::ostream & os, Point p)
-{
-	return os << " {" << p.x << "," << p.y << "}";
+    
+    std::ostream& operator<<(std::ostream& os, const Point& p)
+    {
+        os << "(" << p.getX() << ", " << p.getY() << ")";
+        return os;
+    }
+    
+    bool operator==(const Point& lhs, const Point& rhs)
+    {
+        return rhs.getX() == lhs.getX() && rhs.getY() == lhs.getY();
+    }
+    
+    bool operator!=(const Point& lhs, const Point& rhs)
+    {
+        return ! (lhs == rhs);
+    }
+    
 }
