@@ -10,6 +10,27 @@ PlacedGraphic::PlacedGraphic(const Point & placementPoint, const VectorGraphic &
 
 }
 
+VG::PlacedGraphic::PlacedGraphic(const PlacedGraphic & rhs) : myPlacementPoint{rhs.getPlacementPoint()}, myGraphic{ std::make_unique<VectorGraphic>(new VectorGraphic(*rhs.getGraphic())) }
+{
+}
+
+VG::PlacedGraphic::PlacedGraphic(PlacedGraphic && rhs) : myPlacementPoint{ rhs.getPlacementPoint() }, myGraphic{ std::make_unique<VectorGraphic>(new VectorGraphic(*rhs.getGraphic())) }
+{
+
+}
+
+PlacedGraphic & VG::PlacedGraphic::operator=(const PlacedGraphic & rhs)
+{
+	// TODO: insert return statement here
+	
+}
+
+PlacedGraphic & VG::PlacedGraphic::operator=(PlacedGraphic && rhs)
+{
+	// TODO: insert return statement here
+}
+
+
 void VG::PlacedGraphic::setPlacementPoint(Point const & placement)
 {
 	myPlacementPoint = placement;

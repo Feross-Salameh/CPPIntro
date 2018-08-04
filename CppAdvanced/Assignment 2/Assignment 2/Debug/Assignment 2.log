@@ -1,16 +1,12 @@
 ﻿  PlacedGraphic.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\memory(2510): error C2664: 'VG::VectorGraphic::VectorGraphic(VG::VectorGraphic &&)': cannot convert argument 1 from 'VG::VectorGraphic *' to 'const VG::VectorGraphic &'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\memory(2509): note: Reason: cannot convert from 'VG::VectorGraphic *' to 'const VG::VectorGraphic'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\memory(2509): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+  c:\users\feros\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphic.cpp(13): note: see reference to function template instantiation 'std::unique_ptr<VG::VectorGraphic,std::default_delete<_Ty>> std::make_unique<VG::VectorGraphic,VG::VectorGraphic*,0>(VG::VectorGraphic *&&)' being compiled
+          with
+          [
+              _Ty=VG::VectorGraphic
+          ]
   PlacedGraphicTest.cpp
-c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphictest.cpp(22): error C2280: 'VG::PlacedGraphic::PlacedGraphic(const VG::PlacedGraphic &)': attempting to reference a deleted function
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphic.h(17): note: see declaration of 'VG::PlacedGraphic::PlacedGraphic'
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 2\assignment 2\placedgraphic.h(17): note: 'VG::PlacedGraphic::PlacedGraphic(const VG::PlacedGraphic &)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'std::unique_ptr<VG::VectorGraphic,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)'
-          with
-          [
-              _Ty=VG::VectorGraphic
-          ]
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\memory(2308): note: 'std::unique_ptr<VG::VectorGraphic,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)': function was explicitly deleted
-          with
-          [
-              _Ty=VG::VectorGraphic
-          ]
   VectorGraphicTest.cpp
   Generating Code...
