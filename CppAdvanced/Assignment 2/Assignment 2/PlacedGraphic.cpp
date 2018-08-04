@@ -21,13 +21,23 @@ VG::PlacedGraphic::PlacedGraphic(PlacedGraphic && rhs) : myPlacementPoint{ rhs.g
 
 PlacedGraphic & VG::PlacedGraphic::operator=(const PlacedGraphic & rhs)
 {
+	if (*this != rhs)
+	{
+		auto tmp = const_cast<PlacedGraphic&>(rhs);
+		*this = std::move(tmp);
+	}
 	// TODO: insert return statement here
-	
+	return *this;
 }
 
 PlacedGraphic & VG::PlacedGraphic::operator=(PlacedGraphic && rhs)
 {
+	if (*this != rhs)
+	{
+		*this = std::move(rhs);
+	}
 	// TODO: insert return statement here
+	return *this;
 }
 
 
