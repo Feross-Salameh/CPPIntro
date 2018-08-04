@@ -5,16 +5,16 @@ VG::PlacedGraphic::PlacedGraphic() : myPlacementPoint{ Point(1,1) }, myGraphic{n
 {
 }
 
-PlacedGraphic::PlacedGraphic(const Point & placementPoint, const VectorGraphic & graphic) : myPlacementPoint{ placementPoint }, myGraphic{std::make_unique<VectorGraphic>(graphic)}
+PlacedGraphic::PlacedGraphic(const Point & placementPoint, const VectorGraphic & graphic) : myPlacementPoint{ placementPoint }, myGraphic{ new VectorGraphic(graphic) }
 {
 
 }
 
-VG::PlacedGraphic::PlacedGraphic(const PlacedGraphic & rhs) : myPlacementPoint{rhs.getPlacementPoint()}, myGraphic{ std::make_unique<VectorGraphic>(new VectorGraphic(*rhs.getGraphic())) }
+VG::PlacedGraphic::PlacedGraphic(const PlacedGraphic & rhs) : myPlacementPoint{rhs.myPlacementPoint}, myGraphic{ std::move(const_cast<HVectorGraphic&>(rhs.myGraphic))}
 {
 }
 
-VG::PlacedGraphic::PlacedGraphic(PlacedGraphic && rhs) : myPlacementPoint{ rhs.getPlacementPoint() }, myGraphic{ std::make_unique<VectorGraphic>(new VectorGraphic(*rhs.getGraphic())) }
+VG::PlacedGraphic::PlacedGraphic(PlacedGraphic && rhs) : myPlacementPoint{ std::move(rhs.myPlacementPoint )}, myGraphic{ std::move(rhs.myGraphic) }
 {
 
 }
@@ -73,7 +73,7 @@ void VG::PlacedGraphic::setGraphic(VectorGraphic const & graphic)
 
 void VG::PlacedGraphic::setGraphic(VectorGraphic && graphic)
 {
-	myGraphic = std::make_unique<VectorGraphic>(std::forward<VectorGraphic>(graphic));
+	myGraphic = std::make_unique<VectorGraphic>(std::move(graphic));
 }
 
 HVectorGraphic const & VG::PlacedGraphic::getGraphic() const
@@ -83,7 +83,7 @@ HVectorGraphic const & VG::PlacedGraphic::getGraphic() const
 
 bool VG::PlacedGraphic::operator==(const PlacedGraphic & rhs) const
 {
-	return (myPlacementPoint == rhs.myPlacementPoint) && (myGraphic == rhs.myGraphic);
+	return (myPlacementPoint == rhs.myPlacementPoint) && (*myGraphic == *rhs.myGraphic);
 }
 
 bool VG::PlacedGraphic::operator!=(const PlacedGraphic & rhs) const

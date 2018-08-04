@@ -14,7 +14,7 @@ namespace VG
 		PlacedGraphic();
 		PlacedGraphic(const Point& placementPoint, const VectorGraphic& graphic);
 		// Other constructors will be default, I don't see a need to do anything special:
-		PlacedGraphic(const PlacedGraphic& rhs) ;
+		PlacedGraphic(const PlacedGraphic& rhs);
 		PlacedGraphic(PlacedGraphic&& rhs);
 
 		PlacedGraphic& operator=(const PlacedGraphic& rhs);

@@ -24,6 +24,7 @@
     <ClCompile Include="..\..\CppUnitLite\Test.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
+    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="PlacedGraphic.cpp" />
     <ClCompile Include="PlacedGraphicTest.cpp" />
     <ClCompile Include="Point.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
+    <ClInclude Include="Layer.h" />
     <ClInclude Include="PlacedGraphic.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="VectorGraphic.h" />
