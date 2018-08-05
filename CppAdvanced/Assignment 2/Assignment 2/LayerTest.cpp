@@ -109,11 +109,11 @@ TEST(addGraphic, Layer)
 TEST(removeGraphic, Layer)
 {
 	Layer lyr1;
-
-	PlacedGraphic pg1(Point(1, 1), VectorGraphic());
-	PlacedGraphic pg2(Point(2, 2), VectorGraphic());
-	PlacedGraphic pg3(Point(3, 3), VectorGraphic());
-	PlacedGraphic pg4(Point(4, 4), VectorGraphic());
+	VectorGraphic vg;
+	PlacedGraphic pg1(Point(1, 1), vg);
+	PlacedGraphic pg2(Point(2, 2), vg);
+	PlacedGraphic pg3(Point(3, 3), vg);
+	PlacedGraphic pg4(Point(4, 4), vg);
 	lyr1.addPlacedGraphic(pg1);
 	lyr1.addPlacedGraphic(pg2);
 	lyr1.addPlacedGraphic(pg3);
@@ -135,6 +135,11 @@ TEST(removeGraphic, Layer)
 	CHECK_EQUAL(2, lyr1.getPlacedGraphicCount());
 	CHECK_EQUAL(Point(1, 1), lyr1.getPlacedGraphic(0).getPlacementPoint());
 	CHECK_EQUAL(Point(3, 3), lyr1.getPlacedGraphic(1).getPlacementPoint());
+
+	lyr1.removeGraphic(pg1);
+	lyr1.removeGraphic(pg3);
+
+	CHECK_EQUAL(0, lyr1.getPlacedGraphicCount());
 }
 
 TEST(eraseGraphic, Layer)
@@ -204,4 +209,32 @@ TEST(eraseGraphic, Layer)
 	{
 		CHECK(1);
 	}
+}
+
+TEST(getPlacedGraphic, Layer)
+{
+	Layer lyr1;
+	VectorGraphic vg;
+	PlacedGraphic pg1(Point(1, 1), vg);
+	PlacedGraphic pg2(Point(2, 2), vg);
+	PlacedGraphic pg3(Point(3, 3), vg);
+	PlacedGraphic pg4(Point(4, 4), vg);
+	lyr1.addPlacedGraphic(pg1);
+	lyr1.addPlacedGraphic(pg2);
+	lyr1.addPlacedGraphic(pg3);
+
+	try
+	{
+		lyr1.getPlacedGraphic(5);
+		CHECK(0)
+	}
+	catch (const std::out_of_range&)
+	{
+		CHECK(1)
+	}
+
+	CHECK_EQUAL(3, lyr1.getPlacedGraphicCount());
+	CHECK_EQUAL(Point(1, 1), lyr1.getPlacedGraphic(0).getPlacementPoint());
+	CHECK_EQUAL(Point(2, 2), lyr1.getPlacedGraphic(1).getPlacementPoint());
+	CHECK_EQUAL(Point(3, 3), lyr1.getPlacedGraphic(2).getPlacementPoint());
 }

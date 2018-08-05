@@ -7,6 +7,7 @@
 #include <string>
 using namespace std;
 using namespace VG;
+
 TEST(defaultCTOR, PlacedGraphic)
 {
 	PlacedGraphic pg(Point(1, 1), VectorGraphic());

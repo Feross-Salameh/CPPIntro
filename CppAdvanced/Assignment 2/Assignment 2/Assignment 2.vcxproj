@@ -29,6 +29,7 @@
     <ClCompile Include="PlacedGraphic.cpp" />
     <ClCompile Include="PlacedGraphicTest.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="VectorGraphic.cpp" />
     <ClCompile Include="VectorGraphicTest.cpp" />
   </ItemGroup>
@@ -41,6 +42,7 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="PlacedGraphic.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="VectorGraphic.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

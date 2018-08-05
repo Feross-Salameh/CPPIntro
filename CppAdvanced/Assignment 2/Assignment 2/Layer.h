@@ -2,13 +2,14 @@
 #include <string>
 #include <cstdlib>
 #include <vector>
+#include <list>
 #include "Point.h"
 #include "VectorGraphic.h"
 #include "PlacedGraphic.h"
 
 namespace VG
 {
-	using PlacedGraphicList = std::vector<PlacedGraphic>;
+	using PlacedGraphicList = std::list<PlacedGraphic>;
 	class Layer
 	{
 	public:
@@ -30,9 +31,11 @@ namespace VG
 		void removeGraphic(const PlacedGraphic& graphic);
 		void erasePlacedGraphic(size_t index);
 
-
 		size_t getPlacedGraphicCount() const;
 		const PlacedGraphic& getPlacedGraphic(int index) const;
+
+		bool operator==(const Layer& rhs) const;
+		bool operator!=(const Layer& rhs) const;
 
 	private:
 		std::string myName;

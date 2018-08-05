@@ -54,7 +54,9 @@ void VG::Layer::erasePlacedGraphic(size_t index)
 {
 	if (index < myPlacedGraphics.size())
 	{
-		myPlacedGraphics.erase(myPlacedGraphics.begin() + index);
+		auto iter = myPlacedGraphics.begin();
+		std::advance(iter, index);
+		myPlacedGraphics.erase(iter);
 	}
 	else
 	{
@@ -69,7 +71,26 @@ size_t VG::Layer::getPlacedGraphicCount() const
 
 const PlacedGraphic & VG::Layer::getPlacedGraphic(int index) const
 {
-	return myPlacedGraphics.at(index);
+	if (static_cast<size_t>(index) < myPlacedGraphics.size())
+	{
+		auto iter = myPlacedGraphics.begin();
+		std::advance(iter, index);
+		return *iter;
+	}
+	else
+	{
+		throw std::out_of_range{ "index out of range" };
+	}
+}
+
+bool VG::Layer::operator==(const Layer & rhs) const
+{
+	return myName == rhs.myName && myPlacedGraphics == rhs.myPlacedGraphics;
+}
+
+bool VG::Layer::operator!=(const Layer & rhs) const
+{
+	return !(*this == rhs);
 }
 
 std::ostream& VG::operator<<(std::ostream& os, const Layer& p)

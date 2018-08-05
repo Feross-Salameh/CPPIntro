@@ -1,16 +1,16 @@
 #include "PlacedGraphic.h"
 using namespace VG;
 
-VG::PlacedGraphic::PlacedGraphic() : myPlacementPoint{ Point(1,1) }, myGraphic{new VectorGraphic() }
+VG::PlacedGraphic::PlacedGraphic() : PlacedGraphic(Point(1,1), VectorGraphic())
 {
 }
 
-PlacedGraphic::PlacedGraphic(const Point & placementPoint, const VectorGraphic & graphic) : myPlacementPoint{ placementPoint }, myGraphic{ new VectorGraphic(graphic) }
+PlacedGraphic::PlacedGraphic(const Point & placementPoint, const VectorGraphic & graphic) : myPlacementPoint{ placementPoint }, myGraphic{ std::make_unique<VectorGraphic>(graphic) }
 {
 
 }
 
-VG::PlacedGraphic::PlacedGraphic(const PlacedGraphic & rhs) : myPlacementPoint{rhs.myPlacementPoint}, myGraphic{ std::move(const_cast<HVectorGraphic&>(rhs.myGraphic))}
+VG::PlacedGraphic::PlacedGraphic(const PlacedGraphic & rhs) : myPlacementPoint{rhs.myPlacementPoint}, myGraphic{ new VectorGraphic(*rhs.myGraphic)}
 {
 }
 
@@ -24,7 +24,7 @@ PlacedGraphic & VG::PlacedGraphic::operator=(const PlacedGraphic & rhs)
 	if (*this != rhs)
 	{
 		myPlacementPoint = rhs.myPlacementPoint;
-		myGraphic.reset(rhs.myGraphic.get());
+		myGraphic.reset(new VectorGraphic(*rhs.myGraphic));
 	}
 	// TODO: insert return statement here
 	return *this;
@@ -36,7 +36,9 @@ PlacedGraphic & VG::PlacedGraphic::operator=(PlacedGraphic && rhs)
 	{
 		//*this = std::move(rhs); causing issues with erasePlacedGraphic was called.
 		myPlacementPoint = std::move(rhs.myPlacementPoint);
-		myGraphic = std::move(rhs.myGraphic);
+		myGraphic.reset(new VectorGraphic(*rhs.myGraphic));
+
+		//myGraphic = std::move(rhs.myGraphic);
 	}
 	// TODO: insert return statement here
 	return *this;
