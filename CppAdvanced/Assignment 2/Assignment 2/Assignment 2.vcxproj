@@ -25,6 +25,7 @@
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LayerTest.cpp" />
     <ClCompile Include="PlacedGraphic.cpp" />
     <ClCompile Include="PlacedGraphicTest.cpp" />
     <ClCompile Include="Point.cpp" />

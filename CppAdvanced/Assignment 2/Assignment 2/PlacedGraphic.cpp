@@ -23,8 +23,8 @@ PlacedGraphic & VG::PlacedGraphic::operator=(const PlacedGraphic & rhs)
 {
 	if (*this != rhs)
 	{
-		auto tmp = const_cast<PlacedGraphic&>(rhs);
-		*this = std::move(tmp);
+		myPlacementPoint = rhs.myPlacementPoint;
+		myGraphic.reset(rhs.myGraphic.get());
 	}
 	// TODO: insert return statement here
 	return *this;
@@ -34,7 +34,9 @@ PlacedGraphic & VG::PlacedGraphic::operator=(PlacedGraphic && rhs)
 {
 	if (*this != rhs)
 	{
-		*this = std::move(rhs);
+		//*this = std::move(rhs); causing issues with erasePlacedGraphic was called.
+		myPlacementPoint = std::move(rhs.myPlacementPoint);
+		myGraphic = std::move(rhs.myGraphic);
 	}
 	// TODO: insert return statement here
 	return *this;
@@ -83,7 +85,7 @@ HVectorGraphic const & VG::PlacedGraphic::getGraphic() const
 
 bool VG::PlacedGraphic::operator==(const PlacedGraphic & rhs) const
 {
-	return (myPlacementPoint == rhs.myPlacementPoint) && (*myGraphic == *rhs.myGraphic);
+	return (myPlacementPoint == rhs.myPlacementPoint) && (*(myGraphic.get()) == *(rhs.myGraphic.get()));
 }
 
 bool VG::PlacedGraphic::operator!=(const PlacedGraphic & rhs) const

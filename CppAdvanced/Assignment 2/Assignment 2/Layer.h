@@ -12,8 +12,8 @@ namespace VG
 	class Layer
 	{
 	public:
-		Layer() = default;
-		Layer(const std::string& alias, const PlacedGraphicList& graphicList);
+		Layer();
+		Layer(const char* alias, const PlacedGraphicList& graphicList);
 
 		Layer(const Layer& rhs) = default;
 		Layer(Layer&& rhs) = default;
@@ -21,17 +21,24 @@ namespace VG
 		Layer& operator=(const Layer&) = default;
 		Layer& operator=(Layer&&) = default;
 
+		void setAlias(const char* alias);
 		void setAlias(const std::string& alias);
-		std::string const& getAlias() const;
+		const char* getAlias() const;
 
-		void setPlacedGraphic(const PlacedGraphic& placedGraphic);
-		void setPlacedGraphic(PlacedGraphic&& placedGraphic);
-		PlacedGraphic const& getPlacedGraphic() const;
+		void addPlacedGraphic(const PlacedGraphic& graphic);
+		void addPlacedGraphic(PlacedGraphic&& graphic);
+		void removeGraphic(const PlacedGraphic& graphic);
+		void erasePlacedGraphic(size_t index);
+
+
+		size_t getPlacedGraphicCount() const;
+		const PlacedGraphic& getPlacedGraphic(int index) const;
 
 	private:
-		std::string& myName;
-		PlacedGraphicList& myPlacedGrapics;
+		std::string myName;
+		PlacedGraphicList myPlacedGraphics;
 	};
+	std::ostream& operator<<(std::ostream& os, const Layer& p);
 }
 
 
