@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="..\..\CppUnitLite\Failure.cpp" />
     <ClCompile Include="..\..\CppUnitLite\Main.cpp" />
     <ClCompile Include="..\..\CppUnitLite\Test.cpp" />
@@ -26,24 +27,42 @@
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="LayerTest.cpp" />
+    <ClCompile Include="LayerXMLReader.cpp" />
+    <ClCompile Include="LayerXMLReaderTest.cpp" />
     <ClCompile Include="PlacedGraphic.cpp" />
     <ClCompile Include="PlacedGraphicTest.cpp" />
+    <ClCompile Include="PlacedGraphicXMLReader.cpp" />
+    <ClCompile Include="PlacedGraphicXMLReaderTest.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PointXMLReader.cpp" />
+    <ClCompile Include="PointXMLReaderTestcpp.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneXMLReader.cpp" />
+    <ClCompile Include="SceneXMLReaderTest.cpp" />
     <ClCompile Include="VectorGraphic.cpp" />
     <ClCompile Include="VectorGraphicTest.cpp" />
+    <ClCompile Include="VectorGraphicXMLReader.cpp" />
+    <ClCompile Include="VectorGraphicXMLReaderTest.cpp" />
+    <ClCompile Include="Reader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\tinyxml2\tinyxml2.h" />
     <ClInclude Include="..\..\CppUnitLite\Failure.h" />
     <ClInclude Include="..\..\CppUnitLite\Test.h" />
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="LayerXMLReader.h" />
     <ClInclude Include="PlacedGraphic.h" />
+    <ClInclude Include="PlacedGraphicXMLReader.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="PointXMLReader.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneXMLReader.h" />
     <ClInclude Include="VectorGraphic.h" />
+    <ClInclude Include="VectorGraphicXMLReader.h" />
+    <ClInclude Include="Reader.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

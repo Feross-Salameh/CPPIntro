@@ -1,0 +1,18 @@
+<Scene width="800" height="600">
+    <Layer alias="sky">
+        <PlacedGraphic x="0" y="0">
+            <VectorGraphic closed="true">
+                <Point x="0" y="10"/>
+            </VectorGraphic>
+        </PlacedGraphic>
+        <PlacedGraphic x="700" y="0">
+            <VectorGraphic closed="true"/>
+        </PlacedGraphic>
+    </Layer>
+    <Layer alias="mountains">
+        <PlacedGraphic x="0" y="0">
+            <VectorGraphic closed="false"/>
+        </PlacedGraphic>
+    </Layer>
+    <Layer alias="houses"/>
+</Scene>
