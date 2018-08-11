@@ -34,7 +34,7 @@ namespace Binary
 		}
 
 	private:
-		unsigned short myValue;
+		unsigned __int16 myValue;
 	};
 
 }

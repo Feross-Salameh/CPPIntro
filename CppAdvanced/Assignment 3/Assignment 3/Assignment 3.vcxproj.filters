@@ -56,5 +56,8 @@
     <ClInclude Include="Byte.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DoubleWord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

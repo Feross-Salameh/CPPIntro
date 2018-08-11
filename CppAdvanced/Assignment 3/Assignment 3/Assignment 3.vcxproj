@@ -130,6 +130,7 @@
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
     <ClInclude Include="Byte.h" />
+    <ClInclude Include="DoubleWord.h" />
     <ClInclude Include="Word.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
