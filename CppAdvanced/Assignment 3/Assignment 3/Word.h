@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Byte.h"
 namespace Binary
 {
 	class Word
