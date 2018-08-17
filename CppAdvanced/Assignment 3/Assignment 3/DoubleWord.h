@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Byte.h"
+#include "Word.h"
 namespace Binary
 {
 	class DoubleWord
@@ -8,7 +9,7 @@ namespace Binary
 	public:
 		DoubleWord(unsigned short value = 0) : myValue(value) { }
 		DoubleWord(const DoubleWord& other) = default;
-
+		~DoubleWord() = default;
 		DoubleWord& operator=(DoubleWord const& original)
 		{
 			this->myValue = original.myValue;
@@ -24,7 +25,8 @@ namespace Binary
 		DoubleWord& operator=(DoubleWord&& original) = delete;
 		operator unsigned short() const { return myValue; }
 
-
+		void write(std::ostream& os);
+		void read(std::istream& is);
 		friend std::ostream& operator<<(std::ostream& os, const DoubleWord& word)
 		{
 			os << std::hex << "0x" << std::uppercase;
@@ -38,6 +40,7 @@ namespace Binary
 			os << word.myValue;
 			return os;
 		}
+		const static size_t Length = sizeof(uint32_t);
 
 	private:
 		unsigned __int32 myValue;

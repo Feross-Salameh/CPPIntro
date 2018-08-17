@@ -1,6 +1,25 @@
 #include "WindowsBitmapHeader.h"
 #include "Byte.h"
 
+using namespace Bitmap;
+// setting the static  members for code organization.
+const Binary::Byte WindowsBitmapHeader::firstIdentifier = 'B';
+const Binary::Byte WindowsBitmapHeader::secondIdentifier = 'M';
+
+const Binary::DoubleWord WindowsBitmapHeader::reserved = 0;
+const Binary::DoubleWord WindowsBitmapHeader::rawImageByteOffset = 0;
+
+
+const Binary::DoubleWord WindowsBitmapHeader::infoHeaderBytes = 40;
+
+const Binary::Word WindowsBitmapHeader::numberOfPlanes = 1;
+const Binary::Word WindowsBitmapHeader::bitsPerPixel = 24;
+const Binary::DoubleWord WindowsBitmapHeader::compressionType = 0;
+const Binary::DoubleWord WindowsBitmapHeader::compressedImageSize = 0;
+const Binary::DoubleWord WindowsBitmapHeader::horizontalPixelsPerMeter = 0;
+const Binary::DoubleWord WindowsBitmapHeader::verticalPixelsPerMeter = 0;
+const Binary::DoubleWord WindowsBitmapHeader::numberOfColors = 0;
+const Binary::DoubleWord WindowsBitmapHeader::numberOfImportantColors = 0;
 
 Bitmap::WindowsBitmapHeader::WindowsBitmapHeader(Binary::DoubleWord fileSize, Binary::DoubleWord width, Binary::DoubleWord height) : fileSize{fileSize}, bitmapWidth{width}, bitmapHeight{height}
 {
@@ -120,3 +139,56 @@ const Binary::DoubleWord Bitmap::WindowsBitmapHeader::getNumberOfImportantColors
 {
 	return numberOfImportantColors;
 }
+
+void Bitmap::WindowsBitmapHeader::writeFileHeader(std::ostream & destinationStream) const
+{
+	const_cast<Binary::Byte&>(firstIdentifier).write(destinationStream);
+	const_cast<Binary::Byte&>(secondIdentifier).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(fileSize).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(reserved).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(rawImageByteOffset).write(destinationStream);
+}
+
+void Bitmap::WindowsBitmapHeader::ReadFileHeader(std::istream & SourceStream) const
+{
+	const_cast<Binary::Byte&>(firstIdentifier).read(SourceStream);
+	const_cast<Binary::Byte&>(secondIdentifier).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(fileSize).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(reserved).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(rawImageByteOffset).read(SourceStream);
+}
+
+
+
+void Bitmap::WindowsBitmapHeader::writeInfoHeader(std::ostream & destinationStream) const
+{
+	const_cast<Binary::DoubleWord&>(infoHeaderBytes).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(bitmapWidth).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(bitmapHeight).write(destinationStream);
+	const_cast<Binary::Word&>(numberOfPlanes).write(destinationStream);
+	const_cast<Binary::Word&>(bitsPerPixel).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(compressionType).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(compressedImageSize).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(horizontalPixelsPerMeter).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(verticalPixelsPerMeter).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(numberOfColors).write(destinationStream);
+	const_cast<Binary::DoubleWord&>(numberOfImportantColors).write(destinationStream);
+
+}
+
+void Bitmap::WindowsBitmapHeader::ReadInfoHeader(std::istream & SourceStream) const
+{
+	const_cast<Binary::DoubleWord&>(infoHeaderBytes).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(bitmapWidth).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(bitmapHeight).read(SourceStream);
+	const_cast<Binary::Word&>(numberOfPlanes).read(SourceStream);
+	const_cast<Binary::Word&>(bitsPerPixel).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(compressionType).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(compressedImageSize).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(horizontalPixelsPerMeter).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(verticalPixelsPerMeter).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(numberOfColors).read(SourceStream);
+	const_cast<Binary::DoubleWord&>(numberOfImportantColors).read(SourceStream);
+}
+
+

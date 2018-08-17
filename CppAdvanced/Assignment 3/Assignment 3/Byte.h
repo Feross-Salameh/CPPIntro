@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <bitset>
+#include <vector>
+#include <algorithm>
 namespace Binary
 {
 	/*
@@ -15,13 +17,17 @@ namespace Binary
 
 		return bint.c[0] == 1;
 	}
+
+	
 	class Byte
 	{
+		
 	public:
+
 		Byte(unsigned __int8 value = 0) : myValue{ value } {}
 
 		Byte(const Byte& other) = default;
-
+		~Byte() = default;
 		Byte& operator=(const Byte& rhs) = default;
 		Byte operator=(unsigned __int8 value)
 		{
@@ -32,9 +38,9 @@ namespace Binary
 		Byte(Byte&& other) = delete;
 
 		Byte& operator=(Byte&& rhs) = delete;
-
-		void write(std::ostream& os);
-		void read(std::istream& is);
+		
+		const void write(std::ostream& os);
+		const void read(std::istream& is);
 		operator unsigned __int8() const { return myValue; }
 
 		friend std::ostream& operator<<(std::ostream& os, const Byte& b)
@@ -42,7 +48,8 @@ namespace Binary
 			os << "0x" << std::hex << b.myValue;
 			return os;
 		}
+		const static size_t Length = sizeof(uint8_t);
 	private:
-		unsigned __int8 myValue;
+		uint8_t myValue;
 	};
 }

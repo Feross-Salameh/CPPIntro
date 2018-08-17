@@ -1,8 +1,9 @@
-#include "../../CppUnitLite/TestHarness.h"
-#include <iostream>
 #include "DoubleWord.h"
 #include "Word.h"
 #include "Byte.h"
+#include "../../CppUnitLite/TestHarness.h"
+#include <iostream>
+
 
 using namespace std;
 

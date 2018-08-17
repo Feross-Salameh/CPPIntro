@@ -1,18 +1,39 @@
 #include "Byte.h"
 
-void Binary::Byte::write(std::ostream & os)
+const void Binary::Byte::write(std::ostream & os)
 {
-	std::bitset<8> b(myValue);
-	os << b;
+	
+	if (is_big_endian())
+	{
+		throw "Cannot use Big endian system";
+	}
+	else
+	{
+		char * buffer = new char;
+		*buffer = myValue;
+		os.write(buffer, 1);
+		delete buffer;
+	}
+	
 }
 
-void Binary::Byte::read(std::istream & is)
+const void Binary::Byte::read(std::istream & is)
 {
-	char * buffer = new char;
-	is.read(buffer, 1);
-	myValue = *buffer;
+	
+	if (is_big_endian())
+	{
+		throw "Cannot use Big endian system";
+	}
+	else
+	{
+		char * buffer = new char;
+		is.read(buffer, 1);
+		myValue = *buffer;
 
-	delete buffer;
+		delete buffer;
+
+	}
+	
 }
 
 

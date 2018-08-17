@@ -64,6 +64,14 @@ namespace Bitmap
 
 
 
+		void writeFileHeader(std::ostream& destinationStream) const;
+		void ReadFileHeader(std::istream& SourceStream) const;
+
+
+		void writeInfoHeader(std::ostream& destinationStream) const;
+		void ReadInfoHeader(std::istream& SourceStream) const;
+
+
 	private:
 		// file header
 		const static Binary::Byte firstIdentifier;
@@ -86,24 +94,7 @@ namespace Bitmap
 		const static Binary::DoubleWord numberOfImportantColors;
 	};
 
-	// setting the static  members in the header for code organization.
-	const Binary::Byte WindowsBitmapHeader::firstIdentifier = 'B';
-	const Binary::Byte WindowsBitmapHeader::secondIdentifier = 'M';
 
-	const Binary::DoubleWord WindowsBitmapHeader::reserved = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::rawImageByteOffset = 0;
-
-
-	const Binary::DoubleWord WindowsBitmapHeader::infoHeaderBytes = 40;
-
-	const Binary::Word WindowsBitmapHeader::numberOfPlanes = 1;
-	const Binary::Word WindowsBitmapHeader::bitsPerPixel = 24;
-	const Binary::DoubleWord WindowsBitmapHeader::compressionType = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::compressedImageSize = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::horizontalPixelsPerMeter = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::verticalPixelsPerMeter = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::numberOfColors = 0;
-	const Binary::DoubleWord WindowsBitmapHeader::numberOfImportantColors = 0;
 
 
 

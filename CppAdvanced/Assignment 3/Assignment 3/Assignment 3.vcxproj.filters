@@ -39,6 +39,15 @@
     <ClCompile Include="Byte.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Word.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteReadTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleWord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">

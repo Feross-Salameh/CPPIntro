@@ -123,7 +123,10 @@
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="BinaryTest.cpp" />
     <ClCompile Include="Byte.cpp" />
+    <ClCompile Include="DoubleWord.cpp" />
+    <ClCompile Include="WriteReadTest.cpp" />
     <ClCompile Include="WindowsBitmapHeader.cpp" />
+    <ClCompile Include="Word.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h" />

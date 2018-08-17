@@ -1,5 +1,8 @@
 ﻿  BinaryTest.cpp
   Byte.cpp
+  DoubleWord.cpp
   WindowsBitmapHeader.cpp
+  Word.cpp
+  WriteReadTest.cpp
   Generating Code...
   Assignment 3.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\CppAdvanced\Assignment 3\Debug\Assignment 3.exe
