@@ -124,6 +124,7 @@
     <ClCompile Include="BinaryTest.cpp" />
     <ClCompile Include="Byte.cpp" />
     <ClCompile Include="DoubleWord.cpp" />
+    <ClCompile Include="WindowsBitmap.cpp" />
     <ClCompile Include="WriteReadTest.cpp" />
     <ClCompile Include="WindowsBitmapHeader.cpp" />
     <ClCompile Include="Word.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
     <ClInclude Include="Byte.h" />
     <ClInclude Include="DoubleWord.h" />
+    <ClInclude Include="WindowsBitmap.h" />
     <ClInclude Include="WindowsBitmapHeader.h" />
     <ClInclude Include="Word.h" />
   </ItemGroup>
