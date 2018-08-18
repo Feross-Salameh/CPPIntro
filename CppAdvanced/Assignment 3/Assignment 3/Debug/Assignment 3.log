@@ -1,8 +1,8 @@
 ﻿  BinaryTest.cpp
   SizeWord.cpp
   WindowsBitmapHeader.cpp
-c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(69): warning C4333: '>>': right shift by too large amount, data loss
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(56): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(72): warning C4333: '>>': right shift by too large amount, data loss
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(59): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
   c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmapheader.cpp(145): note: see reference to function template instantiation 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)' being compiled
   c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmapheader.cpp(6): note: see reference to class template instantiation 'Binary::SizeWord<uint8_t>' being compiled
   WriteReadTest.cpp

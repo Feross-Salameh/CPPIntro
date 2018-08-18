@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <type_traits>
 namespace Binary
 {
 	/*
@@ -17,7 +18,7 @@ namespace Binary
 		return bint.c[0] == 1;
 	}
 
-	template<class T>
+	template< typename T>
 	class SizeWord
 	{
 	public:
@@ -45,6 +46,8 @@ namespace Binary
 
 	private:
 		T myValue;
+		static_assert(std::is_arithmetic<T>::value, "Value must be numeric");
+		static_assert(std::is_unsigned<T>::value, "value must be unsigned");
 	};
 	// predefined sizes of words;
 	using Byte = SizeWord<uint8_t>;
@@ -98,7 +101,6 @@ namespace Binary
 			});
 		else if (b.size() == 2)
 			myValue = (b[1] << 8);
-
 		myValue = myValue + b.front();
 	}
 }
