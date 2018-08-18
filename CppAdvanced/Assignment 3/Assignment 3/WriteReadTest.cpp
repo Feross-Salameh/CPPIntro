@@ -1,7 +1,5 @@
 #include "WindowsBitmapHeader.h"
-#include "DoubleWord.h"
-#include "Word.h"
-#include "Byte.h"
+#include "SizeWord.h"
 #include "../../CppUnitLite/TestHarness.h"
 #include <iostream>
 #include <fstream>
@@ -88,11 +86,11 @@ TEST(writeBMP, WindowsBitmapHeader)
 	CHECK_EQUAL('M', wbh2.getSecondIdentifier());
 	CHECK_EQUAL(30054, wbh2.getFileSize());
 	CHECK_EQUAL(0, wbh2.getReserved());
+	WindowsBitmapHeader wbh3;
+	wbh3.ReadInfoHeader(bmpIn);
 
-	wbh.ReadInfoHeader(bmpIn);
-
-	CHECK_EQUAL(40, wbh2.getInfoHeaderBytes());
-	CHECK_EQUAL(100, wbh2.getBitmapWidth());
-	CHECK_EQUAL(100, wbh2.getBitmapHeight());
+	CHECK_EQUAL(40, wbh3.getInfoHeaderBytes());
+	CHECK_EQUAL(100, wbh3.getBitmapWidth());
+	CHECK_EQUAL(100, wbh3.getBitmapHeight());
 
 }

@@ -1,6 +1,7 @@
-#include "DoubleWord.h"
-#include "Word.h"
-#include "Byte.h"
+//#include "DoubleWord.h"
+//#include "Word.h"
+//#include "Byte.h"
+#include "SizeWord.h"
 #include "../../CppUnitLite/TestHarness.h"
 #include <iostream>
 

@@ -122,12 +122,10 @@
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="BinaryTest.cpp" />
-    <ClCompile Include="Byte.cpp" />
-    <ClCompile Include="DoubleWord.cpp" />
+    <ClCompile Include="SizeWord.cpp" />
     <ClCompile Include="WindowsBitmap.cpp" />
     <ClCompile Include="WriteReadTest.cpp" />
     <ClCompile Include="WindowsBitmapHeader.cpp" />
-    <ClCompile Include="Word.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h" />
@@ -135,11 +133,9 @@
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
-    <ClInclude Include="Byte.h" />
-    <ClInclude Include="DoubleWord.h" />
+    <ClInclude Include="SizeWord.h" />
     <ClInclude Include="WindowsBitmap.h" />
     <ClInclude Include="WindowsBitmapHeader.h" />
-    <ClInclude Include="Word.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

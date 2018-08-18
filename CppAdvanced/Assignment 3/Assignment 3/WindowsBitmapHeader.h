@@ -1,8 +1,8 @@
 #pragma once
-#include "Byte.h"
-#include "Word.h"
-#include "DoubleWord.h"
-
+//#include "Byte.h"
+//#include "Word.h"
+//#include "DoubleWord.h"
+#include "SizeWord.h"
 
 namespace Bitmap
 {

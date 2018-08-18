@@ -1,5 +1,5 @@
 #include "WindowsBitmapHeader.h"
-#include "Byte.h"
+//#include "Byte.h"
 
 using namespace Bitmap;
 // setting the static  members for code organization.

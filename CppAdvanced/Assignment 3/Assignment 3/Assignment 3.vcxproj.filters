@@ -36,19 +36,13 @@
     <ClCompile Include="WindowsBitmapHeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Byte.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Word.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WriteReadTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DoubleWord.cpp">
+    <ClCompile Include="WindowsBitmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WindowsBitmap.cpp">
+    <ClCompile Include="SizeWord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,19 +62,13 @@
     <ClInclude Include="..\..\CppUnitLite\TestResult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Word.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Byte.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DoubleWord.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WindowsBitmapHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WindowsBitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SizeWord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
