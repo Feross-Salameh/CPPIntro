@@ -1,5 +1,20 @@
-﻿  BinaryTest.cpp
-  SizeWord.cpp
+﻿  WindowsBitmap.cpp
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(9): error C2143: syntax error: missing ';' before 'Bitmap::WindowsBitmap::begin'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(10): error C2556: 'int Bitmap::WindowsBitmap::begin(void)': overloaded function differs only by return type from 'Bitmap::WindowsBitmap::ScanLineItorator Bitmap::WindowsBitmap::begin(void)'
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.h(32): note: see declaration of 'Bitmap::WindowsBitmap::begin'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(9): error C2371: 'Bitmap::WindowsBitmap::begin': redefinition; different basic types
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.h(32): note: see declaration of 'Bitmap::WindowsBitmap::begin'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(14): error C2143: syntax error: missing ';' before 'Bitmap::WindowsBitmap::end'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(14): error C2086: 'int ScanLineItorator': redefinition
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(9): note: see declaration of 'ScanLineItorator'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(15): error C2556: 'int Bitmap::WindowsBitmap::end(void)': overloaded function differs only by return type from 'Bitmap::WindowsBitmap::ScanLineItorator Bitmap::WindowsBitmap::end(void)'
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.h(33): note: see declaration of 'Bitmap::WindowsBitmap::end'
+c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.cpp(14): error C2371: 'Bitmap::WindowsBitmap::end': redefinition; different basic types
+  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmap.h(33): note: see declaration of 'Bitmap::WindowsBitmap::end'
   WindowsBitmapHeader.cpp
 c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(72): warning C4333: '>>': right shift by too large amount, data loss
   c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(59): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
@@ -7,4 +22,3 @@ c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assig
   c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\windowsbitmapheader.cpp(6): note: see reference to class template instantiation 'Binary::SizeWord<uint8_t>' being compiled
   WriteReadTest.cpp
   Generating Code...
-  Assignment 3.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\CppAdvanced\Assignment 3\Debug\Assignment 3.exe

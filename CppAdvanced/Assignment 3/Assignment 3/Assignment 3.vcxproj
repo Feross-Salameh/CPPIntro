@@ -133,6 +133,7 @@
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="SizeWord.h" />
     <ClInclude Include="WindowsBitmap.h" />
     <ClInclude Include="WindowsBitmapHeader.h" />

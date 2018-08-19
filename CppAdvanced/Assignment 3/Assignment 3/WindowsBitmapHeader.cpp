@@ -50,7 +50,7 @@ void Bitmap::WindowsBitmapHeader::setFileSize(const Binary::DoubleWord & other)
 	fileSize = other;
 }
 
-void Bitmap::WindowsBitmapHeader::setFileSize(unsigned __int16 other)
+void Bitmap::WindowsBitmapHeader::setFileSize(uint16_t other)
 {
 	fileSize = other;
 }
@@ -80,7 +80,7 @@ void Bitmap::WindowsBitmapHeader::setBitmapHeight(const Binary::DoubleWord & oth
 	bitmapHeight = other;
 }
 
-void Bitmap::WindowsBitmapHeader::setBitmapHeight(unsigned __int16 other)
+void Bitmap::WindowsBitmapHeader::setBitmapHeight(uint16_t other)
 {
 	bitmapHeight = other;
 }
@@ -95,7 +95,7 @@ void Bitmap::WindowsBitmapHeader::setBitmapWidth(const Binary::DoubleWord & othe
 	bitmapWidth = other;
 }
 
-void Bitmap::WindowsBitmapHeader::setBitmapWidth(unsigned __int16 other)
+void Bitmap::WindowsBitmapHeader::setBitmapWidth(uint16_t other)
 {
 	bitmapWidth = other;
 }

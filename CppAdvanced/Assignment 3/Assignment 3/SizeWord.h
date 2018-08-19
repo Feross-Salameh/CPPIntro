@@ -46,10 +46,10 @@ namespace Binary
 
 	private:
 		T myValue;
-		static_assert(std::is_arithmetic<T>::value, "Value must be numeric");
-		static_assert(std::is_unsigned<T>::value, "value must be unsigned");
+		static_assert(std::is_arithmetic<T>::value, "value in SizeWoerd must be numeric");
+		static_assert(std::is_unsigned<T>::value, "value in SizeWord must be unsigned");
 	};
-	// predefined sizes of words;
+	// predefined sizes of data containers;
 	using Byte = SizeWord<uint8_t>;
 	using Word = SizeWord<uint16_t>;
 	using DoubleWord = SizeWord<uint32_t>;

@@ -27,7 +27,7 @@ namespace Bitmap
 		const Binary::DoubleWord getFileSize() const;
 
 		void setFileSize(const Binary::DoubleWord& other);
-		void setFileSize(unsigned __int16 other);
+		void setFileSize(uint16_t other);
 
 		const Binary::DoubleWord getReserved() const;
 
@@ -39,12 +39,12 @@ namespace Bitmap
 		const Binary::DoubleWord getBitmapHeight() const;
 
 		void setBitmapHeight(const Binary::DoubleWord& other);
-		void setBitmapHeight(unsigned __int16 other);
+		void setBitmapHeight(uint16_t other);
 
 		const Binary::DoubleWord getBitmapWidth() const;
 
 		void setBitmapWidth(const Binary::DoubleWord& other);
-		void setBitmapWidth(unsigned __int16 other);
+		void setBitmapWidth(uint16_t other);
 
 		const Binary::Word getNumberofPlanes() const;
 
