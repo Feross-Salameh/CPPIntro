@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <list>
 #include <iostream>
-
+#include <memory>
 namespace Bitmap
 {
 	class WindowsBitmap
@@ -38,8 +38,8 @@ namespace Bitmap
 
 
 	private:
-		WindowsBitmapHeader myHeader;
-		ScanLineCollection myScanLines;
+		std::unique_ptr<WindowsBitmapHeader> myHeader;
+		std::unique_ptr<ScanLineCollection> myScanLines;
 
 	};
 }
