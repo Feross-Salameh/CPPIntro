@@ -26,19 +26,15 @@ namespace Binary
 		SizeWord(const SizeWord& other) = default;
 		~SizeWord() = default;
 
-		SizeWord& operator=(SizeWord const& original)
-		{
-			this->myValue = original.myValue;
-			return *this;
-		}
+		SizeWord& operator=(SizeWord const& original) = default;
 		SizeWord& operator=(T value)
 		{
 			this->myValue = value;
 			return *this;
 		}
 
-		SizeWord(SizeWord && other) = delete;
-		SizeWord& operator=(SizeWord&& original) = delete;
+		SizeWord(SizeWord && other) = default;
+		SizeWord& operator=(SizeWord&& original) = default;
 		operator T() const { return myValue; }
 		const static size_t Length = sizeof(T);
 		const void write(std::ostream& os);

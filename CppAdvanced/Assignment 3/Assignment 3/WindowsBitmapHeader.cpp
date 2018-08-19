@@ -30,6 +30,12 @@ Bitmap::WindowsBitmapHeader::WindowsBitmapHeader() : WindowsBitmapHeader(0,0, 0)
 {
 }
 
+Bitmap::WindowsBitmapHeader::WindowsBitmapHeader(std::istream & is)
+{
+	ReadFileHeader(is);
+	ReadInfoHeader(is);
+}
+
 const Binary::Byte Bitmap::WindowsBitmapHeader::getFirstIdentifier() const
 {
 	return firstIdentifier;
@@ -189,6 +195,34 @@ void Bitmap::WindowsBitmapHeader::ReadInfoHeader(std::istream & SourceStream) co
 	const_cast<Binary::DoubleWord&>(verticalPixelsPerMeter).read(SourceStream);
 	const_cast<Binary::DoubleWord&>(numberOfColors).read(SourceStream);
 	const_cast<Binary::DoubleWord&>(numberOfImportantColors).read(SourceStream);
+}
+
+bool Bitmap::WindowsBitmapHeader::operator==(const WindowsBitmapHeader & rhs)
+{
+	return 
+		// file header
+		firstIdentifier == rhs.firstIdentifier &&
+		secondIdentifier == rhs.secondIdentifier &&
+		fileSize == rhs.fileSize &&
+		reserved == rhs.reserved &&
+		rawImageByteOffset == rhs.rawImageByteOffset &&
+		// info header
+		infoHeaderBytes == rhs.infoHeaderBytes &&
+		bitmapWidth == rhs.bitmapWidth &&
+		bitmapHeight == rhs.bitmapHeight &&
+		numberOfPlanes == rhs.numberOfPlanes &&
+		bitsPerPixel == rhs.bitsPerPixel &&
+		compressionType == rhs.compressionType &&
+		compressedImageSize == rhs.compressedImageSize &&
+		horizontalPixelsPerMeter == rhs.horizontalPixelsPerMeter &&
+		verticalPixelsPerMeter == rhs.verticalPixelsPerMeter &&
+		numberOfColors == rhs.numberOfColors &&
+		numberOfImportantColors == rhs.numberOfImportantColors;
+}
+
+bool Bitmap::WindowsBitmapHeader::operator!=(const WindowsBitmapHeader & rhs)
+{
+	return !(*this == rhs);
 }
 
 

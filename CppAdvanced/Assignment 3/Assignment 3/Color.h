@@ -7,6 +7,8 @@ namespace Bitmap
 	public:
 		constexpr Color(const Binary::Byte& blue, const Binary::Byte& green, const Binary::Byte& red)
 			: myRed{ red }, myGreen{ green }, myBlue{ blue } {}
+		Color(int blue, int green, int red)
+			: myRed{ red }, myGreen{ green }, myBlue{ blue } {}
 
 		Color(const Color& other) = default;
 		Color(Color&& other) = default;
@@ -16,17 +18,30 @@ namespace Bitmap
 
 		~Color() = default;
 
-		constexpr uint8_t getRed() const { uint8_t ret = myRed; return ret; }
-		constexpr uint8_t getGreen() const { uint8_t ret = myGreen; return ret; }
-		constexpr uint8_t getBlue() const { uint8_t ret = myBlue; return ret; }
+		constexpr int getRed() const { int ret = myRed; return ret; }
+		constexpr int getGreen() const { int ret = myGreen; return ret; }
+		constexpr int getBlue() const { int ret = myBlue; return ret; }
 
-		void setRed(Binary::Byte&& red) { myRed = red; }
-		void setGreen(Binary::Byte&& green) { myGreen = green; }
-		void setBlue(Binary::Byte&& blue) { myBlue = blue; }
+		void setRed(int red) { myRed = static_cast<uint8_t>(red); }
+		void setGreen(int green) { myGreen = static_cast<uint8_t>(green); }
+		void setBlue(int blue) { myBlue = static_cast<uint8_t>(blue); }
 
-		void setRed(uint8_t red) { myRed = red; }
-		void setGreen(uint8_t green) { myGreen = green; }
-		void setBlue(uint8_t blue) { myBlue = blue; }
+		void Write(std::ostream& destinationStream)
+		{
+			myBlue.write(destinationStream);
+			myGreen.write(destinationStream);
+			myRed.write(destinationStream);
+		}
+
+		bool operator==(const Color& rhs) const
+		{
+			return myBlue == rhs.myBlue && myGreen == rhs.myGreen && myRed == rhs.myRed;
+		}
+
+		bool operator!=(const Color& rhs) const
+		{
+			return !(*this == rhs);
+		}
 
 	private:
 		Binary::Byte myBlue{ 0 };

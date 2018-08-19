@@ -122,6 +122,7 @@
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="BinaryTest.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="SizeWord.cpp" />
     <ClCompile Include="WindowsBitmap.cpp" />
     <ClCompile Include="WriteReadTest.cpp" />

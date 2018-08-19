@@ -1,3 +1,4 @@
+#include "WindowsBitmap.h"
 #include "WindowsBitmapHeader.h"
 #include "SizeWord.h"
 #include "../../CppUnitLite/TestHarness.h"
@@ -32,7 +33,7 @@ TEST(readByte, Word)
 	b.write(bmp2);
 }
 
-TEST(readBMP, WindowsBitmapHeader)
+TEST(readBMPH, WindowsBitmapHeader)
 {
 	std::ifstream bmp("basic.bmp", std::ios::in | std::ios::binary);
 	if (!bmp.is_open())
@@ -55,7 +56,7 @@ TEST(readBMP, WindowsBitmapHeader)
 }
 
 
-TEST(writeBMP, WindowsBitmapHeader)
+TEST(writeBMPH, WindowsBitmapHeader)
 {
 	std::ifstream bmp("basic.bmp", std::ios::in | std::ios::binary);
 	if (!bmp.is_open())
@@ -74,7 +75,7 @@ TEST(writeBMP, WindowsBitmapHeader)
 
 
 	std::ifstream bmpIn("Test.bmp", std::ios::in | std::ios::binary);
-	if (!bmp.is_open())
+	if (!bmpIn.is_open())
 	{
 		throw "Unable to open file";
 	}
@@ -92,5 +93,45 @@ TEST(writeBMP, WindowsBitmapHeader)
 	CHECK_EQUAL(40, wbh3.getInfoHeaderBytes());
 	CHECK_EQUAL(100, wbh3.getBitmapWidth());
 	CHECK_EQUAL(100, wbh3.getBitmapHeight());
+}
 
+TEST(readBitmap, WindowsBitmap)
+{
+	std::ifstream bmpFile("basic.bmp", std::ios::in | std::ios::binary);
+	if (!bmpFile.is_open())
+	{
+		throw "Unable to open file";
+	}
+	WindowsBitmap bitmap(bmpFile);
+
+	CHECK_EQUAL(100, bitmap.getHeight());
+	CHECK_EQUAL(100, bitmap.getWidth());
+	CHECK_EQUAL(30054, bitmap.getFileSize());
+
+
+}
+
+TEST(writeBitmap, WindowsBitmap)
+{
+	std::ifstream bmpFile("basic.bmp", std::ios::in | std::ios::binary);
+	if (!bmpFile.is_open())
+	{
+		throw "Unable to open file";
+	}
+	WindowsBitmap bitmap(bmpFile);
+
+	std::ofstream bmpOut("Test.bmp", std::ios::out | std::ios::binary);
+
+	bitmap.Write(bmpOut);
+	bmpOut.close();
+
+	std::ifstream bmpIn("Test.bmp", std::ios::in | std::ios::binary);
+	if (!bmpIn.is_open())
+	{
+		throw "Unable to open file";
+	}
+	WindowsBitmap bitmapIn(bmpIn);
+
+
+	CHECK_EQUAL(bitmap, bitmapIn);
 }

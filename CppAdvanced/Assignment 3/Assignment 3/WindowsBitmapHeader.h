@@ -10,6 +10,7 @@ namespace Bitmap
 	{
 	public:
 		WindowsBitmapHeader();
+		WindowsBitmapHeader(std::istream& is);
 		WindowsBitmapHeader(Binary::DoubleWord fileSize, Binary::DoubleWord width, Binary::DoubleWord height);
 		WindowsBitmapHeader(const WindowsBitmapHeader&) = default;
 		WindowsBitmapHeader(WindowsBitmapHeader&&) = default;
@@ -71,7 +72,8 @@ namespace Bitmap
 		void writeInfoHeader(std::ostream& destinationStream) const;
 		void ReadInfoHeader(std::istream& SourceStream) const;
 
-
+		bool operator==(const WindowsBitmapHeader& rhs);
+		bool operator!=(const WindowsBitmapHeader& rhs);
 	private:
 		// file header
 		const static Binary::Byte firstIdentifier;
