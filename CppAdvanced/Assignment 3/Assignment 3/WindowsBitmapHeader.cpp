@@ -197,7 +197,7 @@ void Bitmap::WindowsBitmapHeader::ReadInfoHeader(std::istream & SourceStream) co
 	const_cast<Binary::DoubleWord&>(numberOfImportantColors).read(SourceStream);
 }
 
-bool Bitmap::WindowsBitmapHeader::operator==(const WindowsBitmapHeader & rhs)
+bool Bitmap::WindowsBitmapHeader::operator==(const WindowsBitmapHeader & rhs) const 
 {
 	return 
 		// file header
@@ -220,7 +220,7 @@ bool Bitmap::WindowsBitmapHeader::operator==(const WindowsBitmapHeader & rhs)
 		numberOfImportantColors == rhs.numberOfImportantColors;
 }
 
-bool Bitmap::WindowsBitmapHeader::operator!=(const WindowsBitmapHeader & rhs)
+bool Bitmap::WindowsBitmapHeader::operator!=(const WindowsBitmapHeader & rhs) const
 {
 	return !(*this == rhs);
 }
