@@ -120,6 +120,12 @@
     <ClCompile Include="..\..\CppUnitLite\Test.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="CodecLibrary.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ranged_numberTest.cpp" />
+    <ClCompile Include="WindowsBitmapDecoder.cpp" />
+    <ClCompile Include="WindowsBitmapHeader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h" />
@@ -127,6 +133,17 @@
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h" />
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="CodecLibrary.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="IBitmapDecoder.h" />
+    <ClInclude Include="IBitmapEncoder.h" />
+    <ClInclude Include="IBitmapIterator.h" />
+    <ClInclude Include="ranged_number.h" />
+    <ClInclude Include="SizedWord.h" />
+    <ClInclude Include="VerifyEquality.h" />
+    <ClInclude Include="WindowsBitmapDecoder.h" />
+    <ClInclude Include="WindowsBitmapHeader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
