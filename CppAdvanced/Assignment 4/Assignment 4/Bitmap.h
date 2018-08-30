@@ -2,6 +2,7 @@
 
 #include "Color.h"
 #include "IBitmapIterator.h"
+#include "BitmapIterator.h"
 #include <list>
 
 namespace BitmapGraphics
@@ -10,16 +11,12 @@ namespace BitmapGraphics
     {
     public:
         using ScanLine = std::list<Color>;
+		using ColorItorator = ScanLine::const_iterator;
+		using ScanLineCollection = std::list<ScanLine>;
+		using ScanLineIterator = ScanLineCollection::const_iterator;
         
-    private:
-        using ScanLineCollection = std::list<ScanLine>;
-        
-    public:
-        using ScanLineIterator = ScanLineCollection::const_iterator;
-        
-		Bitmap() = delete;
-        // Construct Bitmap from current location in sourceStream -- calls read()
-        Bitmap(uint32_t width, uint32_t height, std::istream& sourceStream);
+		Bitmap() = default;
+        Bitmap(uint32_t width, uint32_t height, ScanLineCollection collection);
 
 		Bitmap(const Bitmap&) noexcept = default;
 		Bitmap(Bitmap&&) noexcept = default;
@@ -36,8 +33,7 @@ namespace BitmapGraphics
         int getHeight() const noexcept { return myHeight; }
         int getNumberOfPadBytes() const;
         
-        //void read(std::istream& sourceStream);
-        //void write(std::ostream& destinationStream) const;
+
         
 		HBitmapIterator createIterator();
 

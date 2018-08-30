@@ -5,8 +5,8 @@
 
 namespace BitmapGraphics
 {
-	using DecoderList = std::list<HBitmapDecoder>;
-	using EncoderList = std::list<HBitmapEncoder>;
+	using DecoderList = std::list<IBitmapDecoder*>;
+	using EncoderList = std::list<IBitmapEncoder*>;
 
 	class CodecLibrary
 	{
@@ -21,8 +21,8 @@ namespace BitmapGraphics
 		CodecLibrary& operator=(CodecLibrary&&) = default;
 
 
-		void registerEncoder(HBitmapEncoder const& encoder) { myEncoders.push_back(encoder); }
-		void registerDecoder(HBitmapDecoder const& decoder) { myDecoders.push_back(decoder); }
+		void registerDecoder(HBitmapDecoder const& decoder) { myDecoders.push_back(&decoder); }
+		void registerEncoder(HBitmapEncoder const& encoder) { myEncoders.push_back(&encoder); }
 
 		// provide a mime type version and an
 		// auto determination version of createDecoder

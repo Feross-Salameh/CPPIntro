@@ -121,6 +121,7 @@
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp" />
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="BitmapIterator.cpp" />
     <ClCompile Include="CodecLibrary.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="ranged_numberTest.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h" />
     <ClInclude Include="..\..\CppUnitLite\TestResult.h" />
     <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="BitmapIterator.h" />
     <ClInclude Include="CodecLibrary.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="IBitmapDecoder.h" />
