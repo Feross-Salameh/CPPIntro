@@ -1,6 +1,8 @@
 #pragma once
 #include "IBitmapDecoder.h"
 #include "IBitmapEncoder.h"
+#include "WindowsBitmapDecoder.h"
+#include "SizedWord.h"
 #include <list>
 
 namespace BitmapGraphics
