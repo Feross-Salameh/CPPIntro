@@ -9,7 +9,7 @@ namespace Bitmap
 			: myRed{ red }, myGreen{ green }, myBlue{ blue } {}
 		Color(int blue, int green, int red)
 			: myRed{ red }, myGreen{ green }, myBlue{ blue } {}
-
+		Color() = default;
 		Color(const Color& other) = default;
 		Color(Color&& other) = default;
 

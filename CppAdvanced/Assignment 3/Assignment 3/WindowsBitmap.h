@@ -21,7 +21,7 @@ namespace Bitmap
 		using ScanLineItorator = ScanLineCollection::iterator;
 
 		WindowsBitmap(std::istream& sourceStream);
-
+		WindowsBitmap() = default;
 		WindowsBitmap(const WindowsBitmap&) = default;
 		WindowsBitmap(WindowsBitmap&&) = default;
 
