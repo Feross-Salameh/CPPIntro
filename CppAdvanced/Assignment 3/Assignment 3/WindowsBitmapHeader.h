@@ -72,8 +72,8 @@ namespace Bitmap
 		void writeInfoHeader(std::ostream& destinationStream) const;
 		void ReadInfoHeader(std::istream& SourceStream) const;
 
-		bool operator==(const WindowsBitmapHeader& rhs);
-		bool operator!=(const WindowsBitmapHeader& rhs);
+		bool operator==(const WindowsBitmapHeader& rhs) const;
+		bool operator!=(const WindowsBitmapHeader& rhs) const;
 	private:
 		// file header
 		const static Binary::Byte firstIdentifier;

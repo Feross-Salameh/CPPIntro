@@ -1,17 +1,13 @@
-﻿  Color.cpp
-c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(68): warning C4333: '>>': right shift by too large amount, data loss
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(55): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(31): note: see reference to function template instantiation 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)' being compiled
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(47): note: see reference to class template instantiation 'Binary::SizeWord<uint8_t>' being compiled
+﻿  Failure.cpp
+  Main.cpp
+  Test.cpp
+  TestRegistry.cpp
+  TestResult.cpp
+  BinaryTest.cpp
+  Color.cpp
+  SizeWord.cpp
   WindowsBitmap.cpp
-c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(68): warning C4333: '>>': right shift by too large amount, data loss
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(55): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(31): note: see reference to function template instantiation 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)' being compiled
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(47): note: see reference to class template instantiation 'Binary::SizeWord<uint8_t>' being compiled
   WriteReadTest.cpp
-c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(68): warning C4333: '>>': right shift by too large amount, data loss
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\sizeword.h(55): note: while compiling class template member function 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)'
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(31): note: see reference to function template instantiation 'const void Binary::SizeWord<uint8_t>::write(std::ostream &)' being compiled
-  c:\users\feros\onedrive\documents\github\cppintro\cppadvanced\assignment 3\assignment 3\color.h(47): note: see reference to class template instantiation 'Binary::SizeWord<uint8_t>' being compiled
+  WindowsBitmapHeader.cpp
   Generating Code...
   Assignment 3.vcxproj -> C:\Users\feros\OneDrive\Documents\GitHub\CPPIntro\CppAdvanced\Assignment 3\Debug\Assignment 3.exe
