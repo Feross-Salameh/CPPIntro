@@ -31,6 +31,10 @@ namespace BitmapGraphics
 		Binary::DoubleWord::data_type getBitmapWidth() const noexcept { return static_cast<uint32_t>(bitmapWidth); }
 		Binary::DoubleWord::data_type getBitmapHeight() const noexcept { return static_cast<uint32_t>(bitmapHeight); }
         
+		void setFileSize(Binary::DoubleWord::data_type filesize) { fileSize = Binary::DoubleWord(filesize); }
+		void setBitmapWidth(Binary::DoubleWord::data_type width) { bitmapWidth = Binary::DoubleWord(width); }
+		void setBItmapHeight(Binary::DoubleWord::data_type height) { bitmapHeight = Binary::DoubleWord(height); }
+
     private:
         // file header
         const static Binary::Byte firstIdentifier;

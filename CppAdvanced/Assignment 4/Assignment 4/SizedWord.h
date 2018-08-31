@@ -97,6 +97,7 @@ namespace Binary
 
 		explicit operator WordSize() const { return myData; }
 
+
 		friend std::ostream& operator<<(std::ostream& os, const SizedWord& word)
 		{
 			os << word.myData;

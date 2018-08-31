@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,6 +125,7 @@
     <ClCompile Include="BitmapIterator.cpp" />
     <ClCompile Include="CodecLibrary.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="DecoderTest.cpp" />
     <ClCompile Include="ranged_numberTest.cpp" />
     <ClCompile Include="WindowsBitmapDecoder.cpp" />
     <ClCompile Include="WindowsBitmapHeader.cpp" />

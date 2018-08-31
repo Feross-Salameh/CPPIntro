@@ -22,4 +22,18 @@ namespace BitmapGraphics
 		
 		return *decoder;
 	}
+	HBitmapDecoder CodecLibrary::createDecoder(std::string const & mimeType, std::istream & sourceStream)
+	{
+		IBitmapDecoder* decoder;
+
+		if (mimeType == "image/x-ms-bmp")
+		{
+			decoder = new WindowsBitmapDecoder(sourceStream, "image/x-ms-bmp");
+		}
+		else
+		{
+			decoder = nullptr;
+		}
+		return *decoder;
+	}
 }

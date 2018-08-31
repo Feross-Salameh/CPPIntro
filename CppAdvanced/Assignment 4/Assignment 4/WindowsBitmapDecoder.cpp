@@ -8,11 +8,11 @@ namespace BitmapGraphics
 			return;
 		WindowsBitmapHeader bitmapHeader = WindowsBitmapHeader(is);
 
-		std::list<Bitmap::ScanLine> newScanLines;
+		std::list<ScanLine> newScanLines;
 
 		for (auto row = 0u; row < bitmapHeader.getBitmapHeight(); ++row)
 		{
-			Bitmap::ScanLine scanLine;
+			ScanLine scanLine;
 
 			// Read row of pixels
 			for (auto column = 0u; column < bitmapHeader.getBitmapWidth(); ++column)

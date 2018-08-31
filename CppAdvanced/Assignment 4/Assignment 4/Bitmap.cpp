@@ -18,6 +18,7 @@ namespace BitmapGraphics
 	HBitmapIterator Bitmap::createIterator()
 	{
 		IBitmapIterator* newBitmap = new BitmapIterator(myWidth, myHeight, myScanLines);
+		
 		return *newBitmap;
 	}
 

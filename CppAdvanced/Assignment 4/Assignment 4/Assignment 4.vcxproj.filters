@@ -54,6 +54,9 @@
     <ClCompile Include="BitmapIterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DecoderTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">

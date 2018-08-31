@@ -2,7 +2,7 @@
 
 namespace BitmapGraphics
 {
-	BitmapIterator::BitmapIterator(uint32_t width, uint32_t height, Bitmap::ScanLineCollection const & collection) : 
+	BitmapIterator::BitmapIterator(uint32_t width, uint32_t height, ScanLineCollection const & collection) : 
 		myWidth{ width }, 
 		myHeight{ height },
 		myScanLineIterorator{collection.begin() },

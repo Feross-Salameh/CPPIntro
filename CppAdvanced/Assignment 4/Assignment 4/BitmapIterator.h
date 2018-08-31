@@ -1,16 +1,18 @@
 #pragma once
 #include "IBitmapIterator.h"
-#include "Bitmap.h"
-
+#include <list>
 namespace BitmapGraphics
 {
+	using ScanLine = std::list<Color>;
+	using ColorItorator = ScanLine::const_iterator;
+	using ScanLineCollection = std::list<ScanLine>;
+	using ScanLineIterator = ScanLineCollection::const_iterator;
 	class BitmapIterator :
 		public IBitmapIterator
 	{
 	public:
 		BitmapIterator() = delete;
-		BitmapIterator(uint32_t width, uint32_t height, Bitmap::ScanLineCollection const& collection);
-		BitmapIterator(Bitmap bitmap);
+		BitmapIterator(uint32_t width, uint32_t height, ScanLineCollection const& collection);
 		~BitmapIterator() = default;
 		BitmapIterator(BitmapIterator const&) = default;
 		BitmapIterator(BitmapIterator &&) = default;
@@ -30,12 +32,12 @@ namespace BitmapGraphics
 	private:
 		uint32_t myWidth{ 0 };
 		uint32_t myHeight{ 0 };
-		Bitmap::ScanLineIterator myScanLineIterorator;
-		Bitmap::ScanLineIterator myScanLineBeginingIterorator;
-		Bitmap::ScanLineIterator myScanLineEndingterorator;
-		Bitmap::ColorItorator myColorIterorator;
-		Bitmap::ColorItorator myColorBeginingIterorator;
-		Bitmap::ColorItorator myColorEndingIterorator;
+		ScanLineIterator myScanLineIterorator;
+		ScanLineIterator myScanLineBeginingIterorator;
+		ScanLineIterator myScanLineEndingterorator;
+		ColorItorator myColorIterorator;
+		ColorItorator myColorBeginingIterorator;
+		ColorItorator myColorEndingIterorator;
 
 		void updateColorIterators();
 	};

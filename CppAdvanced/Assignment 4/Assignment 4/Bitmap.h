@@ -1,19 +1,16 @@
 #pragma once
 
 #include "Color.h"
-#include "IBitmapIterator.h"
 #include "BitmapIterator.h"
 #include <list>
 
 namespace BitmapGraphics
 {
+	
     class Bitmap
     {
     public:
-        using ScanLine = std::list<Color>;
-		using ColorItorator = ScanLine::const_iterator;
-		using ScanLineCollection = std::list<ScanLine>;
-		using ScanLineIterator = ScanLineCollection::const_iterator;
+        
         
 		Bitmap() = default;
         Bitmap(uint32_t width, uint32_t height, ScanLineCollection collection);
@@ -43,4 +40,5 @@ namespace BitmapGraphics
         
         ScanLineCollection myScanLines;
     };
+	
 }
