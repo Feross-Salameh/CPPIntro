@@ -19,7 +19,7 @@ namespace BitmapGraphics
 		virtual int getBitmapHeight() const = 0;
 	};
 
-	using HBitmapIterator = IBitmapIterator&;
+	using HBitmapIterator = IBitmapIterator*;
 }
 
 

@@ -123,6 +123,7 @@
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="BitmapIterator.cpp" />
+    <ClCompile Include="BitmapIteratorTest.cpp" />
     <ClCompile Include="CodecLibrary.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="DecoderTest.cpp" />

@@ -15,6 +15,7 @@ TEST(Decode, WindowsBitmapDecoder)
 		throw "Unable to open file";
 	}
 	auto decoder = WindowsBitmapDecoder(bmp, "image/x-ms-bmp");
-	auto bitmap = decoder.getBitmap();
-
+	CHECK_EQUAL(true, decoder.isSupported());
 }
+
+

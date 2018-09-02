@@ -18,7 +18,6 @@ namespace BitmapGraphics
 		virtual HBitmapIterator createIterator() override { return myBitmap->createIterator(); }
 		virtual std::string getMimeType() override { return myMIMEType; }
 		virtual bool isSupported() override { return myMIMEType == "image/x-ms-bmp"; }
-		Bitmap* getBitmap() const { return myBitmap; }
 	private:
 		Bitmap* myBitmap;
 		std::string myMIMEType;
