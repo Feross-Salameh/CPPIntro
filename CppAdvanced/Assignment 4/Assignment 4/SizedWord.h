@@ -12,7 +12,7 @@ namespace Binary
 	public:
 		using data_type = WordSize;
 
-		explicit SizedWord(WordSize value) : myData{ value } {};
+		SizedWord(WordSize value) : myData{ value } {};
 		SizedWord() = default;
 		SizedWord(const SizedWord& other) = default;
 		SizedWord(SizedWord&& other) = default;
@@ -95,7 +95,7 @@ namespace Binary
 		bool operator==(const SizedWord& rhs) const noexcept { return myData == rhs.myData; }
 		bool operator!=(const SizedWord& rhs) const noexcept { return !(operator==(rhs)); }
 
-		explicit operator WordSize() const { return myData; }
+		operator WordSize() const { return myData; }
 
 
 		friend std::ostream& operator<<(std::ostream& os, const SizedWord& word)

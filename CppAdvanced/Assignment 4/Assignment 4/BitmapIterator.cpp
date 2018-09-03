@@ -14,26 +14,39 @@ namespace BitmapGraphics
 
 	void BitmapIterator::nextScanLine()
 	{
-		if(!isEndOfImage())
+		++myScanLineIterorator;
+		if(myScanLineIterorator != myScanLineEndingterorator)
 		{
-			++myScanLineIterorator;
 			updateColorIterators();
 		}
-			
+		else
+		{
+			throw std::out_of_range("Current End of Scan Lines");
+		}
 	}
 	bool BitmapIterator::isEndOfImage() const
 	{
-		return myColorIterorator == myColorEndingIterorator;
+		return myColorIterorator == myColorEndingIterorator && myScanLineIterorator == myScanLineEndingterorator;
 	}
 	void BitmapIterator::nextPixel()
 	{
-		if(!isEndOfScanLine())
+		if (isEndOfImage())
+		{
+			throw std::out_of_range("Current End of Image");
+		}
+		else if (isEndOfScanLine())
+		{
+			nextScanLine();
+		}
+		else
+		{
 			++myColorIterorator;
+		}
 	}
 
 	bool BitmapIterator::isEndOfScanLine() const
 	{
-		return myScanLineIterorator == myScanLineEndingterorator;
+		return myColorIterorator == myColorEndingIterorator;
 	}
 
 	Color BitmapIterator::getColor() const

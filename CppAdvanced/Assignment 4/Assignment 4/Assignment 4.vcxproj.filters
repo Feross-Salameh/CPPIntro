@@ -16,23 +16,14 @@
     <Filter Include="Tests">
       <UniqueIdentifier>{c0e7e24d-d09e-4dbc-ab38-e9221385b54b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CppUnitLite">
+      <UniqueIdentifier>{ed079c07-7f1c-4d8e-9226-4dba877fa645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface Files">
+      <UniqueIdentifier>{0312d5b8-a5fb-4871-86d9-e9440ce901fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\CppUnitLite\Failure.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CppUnitLite\Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CppUnitLite\Test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CppUnitLite\TestResult.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Bitmap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -60,23 +51,32 @@
     <ClCompile Include="BitmapIteratorTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="WindowsBitmapEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CppUnitLite\TestResult.cpp">
+      <Filter>CppUnitLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp">
+      <Filter>CppUnitLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CppUnitLite\Test.cpp">
+      <Filter>CppUnitLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CppUnitLite\Main.cpp">
+      <Filter>CppUnitLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CppUnitLite\Failure.cpp">
+      <Filter>CppUnitLite</Filter>
+    </ClCompile>
+    <ClCompile Include="BrightnessDecorator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorInversionDecorator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\CppUnitLite\Failure.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CppUnitLite\Test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CppUnitLite\TestHarness.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CppUnitLite\TestRegistry.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CppUnitLite\TestResult.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Bitmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -89,19 +89,10 @@
     <ClInclude Include="WindowsBitmapHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IBitmapIterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ranged_number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VerifyEquality.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IBitmapDecoder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IBitmapEncoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CodecLibrary.h">
@@ -111,6 +102,39 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BitmapIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsBitmapEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CppUnitLite\TestResult.h">
+      <Filter>CppUnitLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CppUnitLite\TestRegistry.h">
+      <Filter>CppUnitLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CppUnitLite\TestHarness.h">
+      <Filter>CppUnitLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CppUnitLite\Test.h">
+      <Filter>CppUnitLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CppUnitLite\Failure.h">
+      <Filter>CppUnitLite</Filter>
+    </ClInclude>
+    <ClInclude Include="IBitmapIterator.h">
+      <Filter>Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBitmapDecoder.h">
+      <Filter>Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBitmapEncoder.h">
+      <Filter>Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BrightnessDecorator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorInversionDecorator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

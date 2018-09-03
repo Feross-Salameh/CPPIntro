@@ -30,6 +30,7 @@ namespace BitmapGraphics
 		bool operator==(const Color& rhs) const noexcept;
 		bool operator!=(const Color& rhs) const noexcept;
 
+
 	private:
 		Binary::Byte myRed{ 0 };
 		Binary::Byte myGreen{ 0 };

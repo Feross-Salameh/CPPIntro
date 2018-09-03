@@ -17,5 +17,3 @@ TEST(Decode, WindowsBitmapDecoder)
 	auto decoder = WindowsBitmapDecoder(bmp, "image/x-ms-bmp");
 	CHECK_EQUAL(true, decoder.isSupported());
 }
-
-

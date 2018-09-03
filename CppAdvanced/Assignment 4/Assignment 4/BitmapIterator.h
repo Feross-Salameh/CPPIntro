@@ -24,7 +24,6 @@ namespace BitmapGraphics
 		virtual bool isEndOfImage() const override;
 		virtual void nextPixel() override;
 		virtual bool isEndOfScanLine() const override;
-
 		virtual Color getColor() const override;
 
 		virtual int getBitmapWidth() const override { return myWidth; }
