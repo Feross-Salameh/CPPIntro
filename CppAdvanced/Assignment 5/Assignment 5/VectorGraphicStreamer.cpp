@@ -15,6 +15,8 @@ namespace
 {
 	static const string closingVectorGraphicTag{ "</VectorGraphic" };
 	static const string openingVectorGraphicTag{ "<VectorGraphic" };
+	static const string closingStrokeTag{ "</Stroke" };
+	static const string openingStrokeTag{ "<Stroke" };
 	static const string closingPointTag{ "</Point" };
 	static const string openingPointTag{ "<Point" };
 	static const std::regex attribute("(\\w+)=\"(\\w+)\"");

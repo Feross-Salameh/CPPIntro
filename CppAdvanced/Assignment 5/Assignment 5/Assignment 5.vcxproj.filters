@@ -45,13 +45,7 @@
     <ClCompile Include="Parse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SceneTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tinyxml2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CodecLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ParseTest.cpp">
@@ -120,9 +114,6 @@
     <ClCompile Include="WindowsBitmapHeader.cpp">
       <Filter>Source Files\Bitmap</Filter>
     </ClCompile>
-    <ClCompile Include="Element.cpp">
-      <Filter>Source Files\VectorGraphic</Filter>
-    </ClCompile>
     <ClCompile Include="Layer.cpp">
       <Filter>Source Files\VectorGraphic</Filter>
     </ClCompile>
@@ -147,9 +138,6 @@
     <ClCompile Include="VectorGraphicStreamer.cpp">
       <Filter>Source Files\VectorGraphic</Filter>
     </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Source Files\Bitmap</Filter>
-    </ClCompile>
     <ClCompile Include="XmlWriter.cpp">
       <Filter>Source Files\VectorGraphic\XML</Filter>
     </ClCompile>
@@ -157,6 +145,18 @@
       <Filter>Source Files\VectorGraphic\XML</Filter>
     </ClCompile>
     <ClCompile Include="XmlFactories.cpp">
+      <Filter>Source Files\VectorGraphic\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTest.cpp">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="CodecLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Element.cpp">
       <Filter>Source Files\VectorGraphic\XML</Filter>
     </ClCompile>
   </ItemGroup>
@@ -202,9 +202,6 @@
     </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\TestResult.h">
       <Filter>Header Files\CppUnitLite</Filter>
-    </ClInclude>
-    <ClInclude Include="Element.h">
-      <Filter>Header Files\VectorGraphic</Filter>
     </ClInclude>
     <ClInclude Include="binary_ostream_iterator.h">
       <Filter>Header Files\VectorGraphic</Filter>
@@ -269,9 +266,6 @@
     <ClInclude Include="Point.h">
       <Filter>Header Files\VectorGraphic</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files\Bitmap</Filter>
-    </ClInclude>
     <ClInclude Include="XmlWriter.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
@@ -282,6 +276,12 @@
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
     <ClInclude Include="XmlReader.h">
+      <Filter>Header Files\VectorGraphic\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Element.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
   </ItemGroup>
