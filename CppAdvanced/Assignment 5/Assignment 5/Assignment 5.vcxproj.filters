@@ -159,6 +159,12 @@
     <ClCompile Include="Element.cpp">
       <Filter>Source Files\VectorGraphic\XML</Filter>
     </ClCompile>
+    <ClCompile Include="SquareStroke.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SquarePen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parse.h">
@@ -283,6 +289,24 @@
     </ClInclude>
     <ClInclude Include="Element.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="IProjecter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICanvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IStroke.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IPen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SquareStroke.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SquarePen.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
