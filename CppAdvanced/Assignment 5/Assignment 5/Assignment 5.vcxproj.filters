@@ -171,6 +171,9 @@
     <ClCompile Include="CodecLibrary.cpp">
       <Filter>Source Files\Bitmap</Filter>
     </ClCompile>
+    <ClCompile Include="BasicCanvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">
@@ -295,6 +298,15 @@
     </ClInclude>
     <ClInclude Include="CodecLibrary.h">
       <Filter>Header Files\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="ICanvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IProjector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicCanvas.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
