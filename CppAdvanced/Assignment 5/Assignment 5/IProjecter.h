@@ -7,7 +7,7 @@ namespace BitmapGraphics
 	class IProjector
 	{
 	public:
-		virtual void projectCanvas(BitmapGraphics::HCanvas const& canvas) = 0;
+		virtual void projectCanvas(HCanvas const& canvas) = 0;
 	};
 
 }

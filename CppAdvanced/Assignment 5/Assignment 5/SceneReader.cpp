@@ -37,9 +37,16 @@ namespace
         Xml::ElementCollection::const_iterator p;
         for (p = points.begin(); p != points.end(); ++p)
         {
-            int x = toInt((*p)->getAttribute("x"));
-            int y = toInt((*p)->getAttribute("y"));
-			vg.addPoint(VG::Point(x, y));
+			if ((*p)->getName() == "Point")
+			{
+				int x = toInt((*p)->getAttribute("x"));
+				int y = toInt((*p)->getAttribute("y"));
+				vg.addPoint(VG::Point(x, y));
+			}
+			else if ((*p)->getName() == "Stroke")
+			{
+				// TODO: finish adding reader for Pen
+			}
         }
         
         return vg;

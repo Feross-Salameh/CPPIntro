@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\CppUnitLite">
-      <UniqueIdentifier>{c44b7815-2c7f-4d1c-adf5-5f071351df7a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\CppUnitLite">
-      <UniqueIdentifier>{1912fc16-a958-4004-8448-1e77be57891b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Tests">
       <UniqueIdentifier>{d04a2ee6-5be0-4338-a8c4-d11fdf8dadda}</UniqueIdentifier>
     </Filter>
@@ -40,12 +34,27 @@
     <Filter Include="Source Files\VectorGraphic\XML">
       <UniqueIdentifier>{e92127f8-a4d6-4a40-b5a1-59852ceae149}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data Storing">
+      <UniqueIdentifier>{e1f5f1d4-6e00-4261-8112-402fda060670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data Storing">
+      <UniqueIdentifier>{d77077b6-44c7-4530-bbca-2f94c0bc575f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\3rd Party Tools">
+      <UniqueIdentifier>{6dcb6674-04b0-4319-bcae-8e2c3782b971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3rd Party Tools">
+      <UniqueIdentifier>{d83fddc6-db7e-4e1c-8389-ac4d922e1115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3rd Party Tools\CppUnitLite">
+      <UniqueIdentifier>{1912fc16-a958-4004-8448-1e77be57891b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\3rd Party Tools\CppUnitLite">
+      <UniqueIdentifier>{c44b7815-2c7f-4d1c-adf5-5f071351df7a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Parse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyxml2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ParseTest.cpp">
@@ -79,19 +88,19 @@
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
     <ClCompile Include="..\..\CppUnitLite\Failure.cpp">
-      <Filter>Source Files\CppUnitLite</Filter>
+      <Filter>Source Files\3rd Party Tools\CppUnitLite</Filter>
     </ClCompile>
     <ClCompile Include="..\..\CppUnitLite\Main.cpp">
-      <Filter>Source Files\CppUnitLite</Filter>
+      <Filter>Source Files\3rd Party Tools\CppUnitLite</Filter>
     </ClCompile>
     <ClCompile Include="..\..\CppUnitLite\Test.cpp">
-      <Filter>Source Files\CppUnitLite</Filter>
+      <Filter>Source Files\3rd Party Tools\CppUnitLite</Filter>
     </ClCompile>
     <ClCompile Include="..\..\CppUnitLite\TestRegistry.cpp">
-      <Filter>Source Files\CppUnitLite</Filter>
+      <Filter>Source Files\3rd Party Tools\CppUnitLite</Filter>
     </ClCompile>
     <ClCompile Include="..\..\CppUnitLite\TestResult.cpp">
-      <Filter>Source Files\CppUnitLite</Filter>
+      <Filter>Source Files\3rd Party Tools\CppUnitLite</Filter>
     </ClCompile>
     <ClCompile Include="Bitmap.cpp">
       <Filter>Source Files\Bitmap</Filter>
@@ -153,61 +162,40 @@
     <ClCompile Include="CodecLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Element.cpp">
       <Filter>Source Files\VectorGraphic\XML</Filter>
     </ClCompile>
     <ClCompile Include="SquareStroke.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SquarePen.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Data Storing</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>Source Files\3rd Party Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tinyxml2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Byte.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CodecLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DoubleWord.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="narrow_cast.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ranged_number.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SizedWord.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Word.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">
-      <Filter>Header Files\CppUnitLite</Filter>
+      <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\Test.h">
-      <Filter>Header Files\CppUnitLite</Filter>
+      <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\TestHarness.h">
-      <Filter>Header Files\CppUnitLite</Filter>
+      <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\TestRegistry.h">
-      <Filter>Header Files\CppUnitLite</Filter>
+      <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\TestResult.h">
-      <Filter>Header Files\CppUnitLite</Filter>
+      <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
     <ClInclude Include="binary_ostream_iterator.h">
       <Filter>Header Files\VectorGraphic</Filter>
@@ -284,9 +272,6 @@
     <ClInclude Include="XmlReader.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Element.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
@@ -305,8 +290,29 @@
     <ClInclude Include="SquareStroke.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SquarePen.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="narrow_cast.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="Byte.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="Word.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleWord.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="ranged_number.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="SizedWord.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Data Storing</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>Header Files\3rd Party Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

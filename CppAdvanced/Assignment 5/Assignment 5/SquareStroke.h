@@ -1,6 +1,6 @@
 #pragma once
 #include "IStroke.h"
-
+#include "IPen.h"
 
 namespace VG
 {
@@ -25,7 +25,7 @@ namespace VG
 	private:
 		BitmapGraphics::Color myColor;
 		int mysize;
-		BitmapGraphics::HCanvas myCanvas;
+		HPen myPenTip;
 	};
 }
 

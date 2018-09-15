@@ -142,7 +142,6 @@
     <ClCompile Include="SceneTest.cpp" />
     <ClCompile Include="SceneWriter.cpp" />
     <ClCompile Include="SceneWriterTest.cpp" />
-    <ClCompile Include="SquarePen.cpp" />
     <ClCompile Include="SquareStroke.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
     <ClCompile Include="VectorGraphic.cpp" />
@@ -191,7 +190,6 @@
     <ClInclude Include="SceneReader.h" />
     <ClInclude Include="SceneWriter.h" />
     <ClInclude Include="SizedWord.h" />
-    <ClInclude Include="SquarePen.h" />
     <ClInclude Include="SquareStroke.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="VectorGraphic.h" />
