@@ -2,7 +2,7 @@
 
 #include "IBitmapEncoder.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
     class WindowsBitmapEncoder: public IBitmapEncoder
     {

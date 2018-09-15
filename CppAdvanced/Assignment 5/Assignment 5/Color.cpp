@@ -1,6 +1,6 @@
 #include "Color.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
 
     Color::Color(

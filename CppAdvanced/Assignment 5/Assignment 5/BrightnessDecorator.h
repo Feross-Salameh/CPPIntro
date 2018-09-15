@@ -3,7 +3,7 @@
 #include "BitmapIteratorDecorator.h"
 #include "Byte.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
 	class BrightnessDecorator : public BitmapIteratorDecorator
 	{

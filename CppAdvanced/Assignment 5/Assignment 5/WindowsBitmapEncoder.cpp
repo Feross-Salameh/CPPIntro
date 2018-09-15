@@ -3,7 +3,7 @@
 #include "WindowsBitmapCommon.h"
 #include "Color.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
 	WindowsBitmapEncoder::WindowsBitmapEncoder(
 		HBitmapIterator bitmapIterator)

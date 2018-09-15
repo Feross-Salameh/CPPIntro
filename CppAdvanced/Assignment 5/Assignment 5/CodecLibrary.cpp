@@ -5,7 +5,7 @@ namespace
     const int ChunkSize{100};
 }
 
-namespace BitmapGraphics
+namespace Framework
 {
     
     void CodecLibrary::registerEncoder(HBitmapEncoder encoder)

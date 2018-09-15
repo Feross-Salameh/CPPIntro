@@ -9,8 +9,8 @@ namespace Framework
     class PlacedGraphic
     {
     public:
-        PlacedGraphic(const VG::Point& placement,
-                      const VG::VectorGraphic& graphic);
+        PlacedGraphic(const Framework::Point& placement,
+                      const Framework::VectorGraphic& graphic);
         
         PlacedGraphic();
 
@@ -25,18 +25,18 @@ namespace Framework
 			myPlacementPoint = std::forward<P>(p);
 		}
 
-        const VG::Point& getPlacementPoint() const;
+        const Framework::Point& getPlacementPoint() const;
 
-		template<class VG> void setGraphic(VG&& graphic)
+		template<class Framework> void setGraphic(Framework&& graphic)
 		{
-			myGraphic = std::forward<VG>(graphic);
+			myGraphic = std::forward<Framework>(graphic);
 		}
 
-        const VG::VectorGraphic& getGraphic() const;
+        const Framework::VectorGraphic& getGraphic() const;
         
     private:
-        VG::Point myPlacementPoint;
-        VG::VectorGraphic myGraphic;
+        Framework::Point myPlacementPoint;
+        Framework::VectorGraphic myGraphic;
     };
     
     bool operator==(const PlacedGraphic& lhs, const PlacedGraphic& rhs);

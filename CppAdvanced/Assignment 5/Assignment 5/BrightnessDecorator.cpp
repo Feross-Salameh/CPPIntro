@@ -2,7 +2,7 @@
 #include "Color.h"
 #include "ranged_number.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
 	BrightnessDecorator::BrightnessDecorator(
 		HBitmapIterator originalIterator,

@@ -2,7 +2,7 @@
 
 #include <iosfwd>
 
-namespace VG
+namespace Framework
 {
     class Point
     {

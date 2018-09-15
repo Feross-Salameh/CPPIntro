@@ -7,105 +7,105 @@
 
 TEST(ctor, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    CHECK_EQUAL(0, vg.getPointCount());
-    CHECK_EQUAL(true, vg.isClosed());
-    CHECK_EQUAL(false, vg.isOpen());
+    Framework::VectorGraphic Framework;
+    CHECK_EQUAL(0, Framework.getPointCount());
+    CHECK_EQUAL(true, Framework.isClosed());
+    CHECK_EQUAL(false, Framework.isOpen());
 }
 
 TEST(copyCtor, VectorGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point(1, 1));
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point(1, 1));
 	
-	VG::VectorGraphic vg2{ vg };
+	Framework::VectorGraphic Framework2{ Framework };
 
-	CHECK_EQUAL(1, vg.getPointCount());
-	CHECK_EQUAL(true, vg.isClosed());
-	CHECK_EQUAL(false, vg.isOpen());
+	CHECK_EQUAL(1, Framework.getPointCount());
+	CHECK_EQUAL(true, Framework.isClosed());
+	CHECK_EQUAL(false, Framework.isOpen());
 
-	CHECK_EQUAL(1, vg2.getPointCount());
-	CHECK_EQUAL(true, vg2.isClosed());
-	CHECK_EQUAL(false, vg2.isOpen());
+	CHECK_EQUAL(1, Framework2.getPointCount());
+	CHECK_EQUAL(true, Framework2.isClosed());
+	CHECK_EQUAL(false, Framework2.isOpen());
 }
 
 TEST(moveCtor, VectorGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point(1, 1));
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point(1, 1));
 
-	VG::VectorGraphic vg2{ std::move(vg) };
+	Framework::VectorGraphic Framework2{ std::move(Framework) };
 
-	CHECK_EQUAL(0, vg.getPointCount());
+	CHECK_EQUAL(0, Framework.getPointCount());
 
-	CHECK_EQUAL(1, vg2.getPointCount());
-	CHECK_EQUAL(true, vg2.isClosed());
-	CHECK_EQUAL(false, vg2.isOpen());
+	CHECK_EQUAL(1, Framework2.getPointCount());
+	CHECK_EQUAL(true, Framework2.isClosed());
+	CHECK_EQUAL(false, Framework2.isOpen());
 }
 
 TEST(copyAssign, VectorGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point( 1,1));
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point( 1,1));
 
-	VG::VectorGraphic vg2;
-	vg2 = vg;
+	Framework::VectorGraphic Framework2;
+	Framework2 = Framework;
 
-	CHECK_EQUAL(1, vg.getPointCount());
-	CHECK_EQUAL(true, vg.isClosed());
-	CHECK_EQUAL(false, vg.isOpen());
+	CHECK_EQUAL(1, Framework.getPointCount());
+	CHECK_EQUAL(true, Framework.isClosed());
+	CHECK_EQUAL(false, Framework.isOpen());
 
-	CHECK_EQUAL(1, vg2.getPointCount());
-	CHECK_EQUAL(true, vg2.isClosed());
-	CHECK_EQUAL(false, vg2.isOpen());
+	CHECK_EQUAL(1, Framework2.getPointCount());
+	CHECK_EQUAL(true, Framework2.isClosed());
+	CHECK_EQUAL(false, Framework2.isOpen());
 }
 
 TEST(moveAssign, VectorGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point(1, 1));
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point(1, 1));
 
-	VG::VectorGraphic vg2;
-	vg2 = std::move(vg);
+	Framework::VectorGraphic Framework2;
+	Framework2 = std::move(Framework);
 
-	CHECK_EQUAL(0, vg.getPointCount());
+	CHECK_EQUAL(0, Framework.getPointCount());
 
-	CHECK_EQUAL(1, vg2.getPointCount());
-	CHECK_EQUAL(true, vg2.isClosed());
-	CHECK_EQUAL(false, vg2.isOpen());
+	CHECK_EQUAL(1, Framework2.getPointCount());
+	CHECK_EQUAL(true, Framework2.isClosed());
+	CHECK_EQUAL(false, Framework2.isOpen());
 }
 
 TEST(addPoint, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-	VG::Point p{ 1,1 };
-    vg.addPoint(p);
-    CHECK_EQUAL(1, vg.getPointCount());
+    Framework::VectorGraphic Framework;
+	Framework::Point p{ 1,1 };
+    Framework.addPoint(p);
+    CHECK_EQUAL(1, Framework.getPointCount());
     
-    vg.addPoint(VG::Point{2, 2});
-    CHECK_EQUAL(2, vg.getPointCount());
+    Framework.addPoint(Framework::Point{2, 2});
+    CHECK_EQUAL(2, Framework.getPointCount());
 }
 
 TEST(removePoint, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    vg.addPoint(VG::Point{1, 1});
-    vg.addPoint(VG::Point{2, 2});
-    vg.removePoint(VG::Point{1, 1});
+    Framework::VectorGraphic Framework;
+    Framework.addPoint(Framework::Point{1, 1});
+    Framework.addPoint(Framework::Point{2, 2});
+    Framework.removePoint(Framework::Point{1, 1});
     
-    CHECK_EQUAL(1, vg.getPointCount());
-    CHECK_EQUAL(VG::Point(2, 2), vg.getPoint(0));
+    CHECK_EQUAL(1, Framework.getPointCount());
+    CHECK_EQUAL(Framework::Point(2, 2), Framework.getPoint(0));
 }
 
-TEST(removePointNotInVG, VectorGraphic)
+TEST(removePointNotInFramework, VectorGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1, 1 });
-	vg.addPoint(VG::Point{ 2, 2 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1, 1 });
+	Framework.addPoint(Framework::Point{ 2, 2 });
 	
 	try
 	{
-		vg.removePoint(VG::Point{ 3, 3 });
+		Framework.removePoint(Framework::Point{ 3, 3 });
 	}
 	catch (std::invalid_argument&)
 	{
@@ -118,31 +118,31 @@ TEST(removePointNotInVG, VectorGraphic)
 
 TEST(erasePoint, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    vg.addPoint(VG::Point{1, 1});
-    vg.addPoint(VG::Point{2, 2});
-    vg.addPoint(VG::Point{3, 3});
-    vg.erasePoint(1);
+    Framework::VectorGraphic Framework;
+    Framework.addPoint(Framework::Point{1, 1});
+    Framework.addPoint(Framework::Point{2, 2});
+    Framework.addPoint(Framework::Point{3, 3});
+    Framework.erasePoint(1);
     
-    CHECK_EQUAL(2, vg.getPointCount());
-    CHECK_EQUAL(VG::Point(1, 1), vg.getPoint(0));
-    CHECK_EQUAL(VG::Point(3, 3), vg.getPoint(1));
+    CHECK_EQUAL(2, Framework.getPointCount());
+    CHECK_EQUAL(Framework::Point(1, 1), Framework.getPoint(0));
+    CHECK_EQUAL(Framework::Point(3, 3), Framework.getPoint(1));
 }
 
 TEST(erasePointOutOfRange, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    vg.addPoint(VG::Point{1, 1});
-    vg.addPoint(VG::Point{2, 2});
-    vg.addPoint(VG::Point{3, 3});
+    Framework::VectorGraphic Framework;
+    Framework.addPoint(Framework::Point{1, 1});
+    Framework.addPoint(Framework::Point{2, 2});
+    Framework.addPoint(Framework::Point{3, 3});
     
     try
     {
-        vg.erasePoint(5);
+        Framework.erasePoint(5);
     }
     catch (std::out_of_range&)
     {
-        CHECK_EQUAL(3, vg.getPointCount());
+        CHECK_EQUAL(3, Framework.getPointCount());
         return;
     }
     CHECK(false); // should have caught exception
@@ -150,65 +150,65 @@ TEST(erasePointOutOfRange, VectorGraphic)
 
 TEST(equality, VectorGraphic)
 {
-    VG::VectorGraphic vg1;
-    vg1.addPoint(VG::Point{1, 1});
-    vg1.addPoint(VG::Point{2, 2});
-    vg1.addPoint(VG::Point{3, 3});
+    Framework::VectorGraphic Framework1;
+    Framework1.addPoint(Framework::Point{1, 1});
+    Framework1.addPoint(Framework::Point{2, 2});
+    Framework1.addPoint(Framework::Point{3, 3});
     
-    VG::VectorGraphic vg2;
-    vg2.addPoint(VG::Point{1, 1});
-    vg2.addPoint(VG::Point{2, 2});
-    vg2.addPoint(VG::Point{3, 3});
+    Framework::VectorGraphic Framework2;
+    Framework2.addPoint(Framework::Point{1, 1});
+    Framework2.addPoint(Framework::Point{2, 2});
+    Framework2.addPoint(Framework::Point{3, 3});
     
-    CHECK(vg1 == vg2);
+    CHECK(Framework1 == Framework2);
 }
 
 TEST(inequality, VectorGraphic)
 {
-    VG::VectorGraphic vg1;
-    vg1.addPoint(VG::Point{1, 1});
-    vg1.addPoint(VG::Point{1, 2});
-    vg1.addPoint(VG::Point{1, 3});
+    Framework::VectorGraphic Framework1;
+    Framework1.addPoint(Framework::Point{1, 1});
+    Framework1.addPoint(Framework::Point{1, 2});
+    Framework1.addPoint(Framework::Point{1, 3});
     
-    VG::VectorGraphic vg2;
-    vg2.addPoint(VG::Point{2, 1});
-    vg2.addPoint(VG::Point{2, 2});
-    vg2.addPoint(VG::Point{2, 3});
+    Framework::VectorGraphic Framework2;
+    Framework2.addPoint(Framework::Point{2, 1});
+    Framework2.addPoint(Framework::Point{2, 2});
+    Framework2.addPoint(Framework::Point{2, 3});
     
-    CHECK(vg1 != vg2);
+    CHECK(Framework1 != Framework2);
     
-    VG::VectorGraphic vg3;
-    vg3.addPoint(VG::Point{1, 1});
-    vg3.addPoint(VG::Point{1, 2});
-    vg3.addPoint(VG::Point{1, 3});
-    vg3.openShape();
+    Framework::VectorGraphic Framework3;
+    Framework3.addPoint(Framework::Point{1, 1});
+    Framework3.addPoint(Framework::Point{1, 2});
+    Framework3.addPoint(Framework::Point{1, 3});
+    Framework3.openShape();
     
-    CHECK(vg3 != vg1);
+    CHECK(Framework3 != Framework1);
 }
 
 TEST(closeShape, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    vg.closeShape();
-    CHECK_EQUAL(true, vg.isClosed());
-    CHECK_EQUAL(false, vg.isOpen());
+    Framework::VectorGraphic Framework;
+    Framework.closeShape();
+    CHECK_EQUAL(true, Framework.isClosed());
+    CHECK_EQUAL(false, Framework.isOpen());
 }
 
 TEST(openShape, VectorGraphic)
 {
-    VG::VectorGraphic vg;
-    vg.openShape();
-    CHECK_EQUAL(false, vg.isClosed());
-    CHECK_EQUAL(true, vg.isOpen());
+    Framework::VectorGraphic Framework;
+    Framework.openShape();
+    CHECK_EQUAL(false, Framework.isClosed());
+    CHECK_EQUAL(true, Framework.isOpen());
 }
 
 TEST(widthHeight, VectorGraphic)
 {
-    VG::VectorGraphic vectorGraphic;
-    vectorGraphic.addPoint(VG::Point{0, 2});
-    vectorGraphic.addPoint(VG::Point{4, 3});
-    vectorGraphic.addPoint(VG::Point{5, 8});
-    vectorGraphic.addPoint(VG::Point{2, 1});
+    Framework::VectorGraphic vectorGraphic;
+    vectorGraphic.addPoint(Framework::Point{0, 2});
+    vectorGraphic.addPoint(Framework::Point{4, 3});
+    vectorGraphic.addPoint(Framework::Point{5, 8});
+    vectorGraphic.addPoint(Framework::Point{2, 1});
     CHECK_EQUAL(5, vectorGraphic.getWidth());
     CHECK_EQUAL(7, vectorGraphic.getHeight());
     

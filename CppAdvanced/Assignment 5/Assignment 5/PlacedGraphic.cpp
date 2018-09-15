@@ -8,19 +8,19 @@ namespace Framework
     {
     }
     
-    PlacedGraphic::PlacedGraphic(const VG::Point& placement,
-                                 const VG::VectorGraphic& graphic) :
+    PlacedGraphic::PlacedGraphic(const Framework::Point& placement,
+                                 const Framework::VectorGraphic& graphic) :
 		myPlacementPoint{ placement },
 		myGraphic{ graphic }
     {
     }
     
-    const VG::Point& PlacedGraphic::getPlacementPoint() const
+    const Framework::Point& PlacedGraphic::getPlacementPoint() const
     {
         return myPlacementPoint;
     }
     
-    const VG::VectorGraphic& PlacedGraphic::getGraphic() const
+    const Framework::VectorGraphic& PlacedGraphic::getGraphic() const
     {
         return myGraphic;
     }

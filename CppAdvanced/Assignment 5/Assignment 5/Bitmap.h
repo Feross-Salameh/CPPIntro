@@ -4,7 +4,7 @@
 #include "Color.h"
 #include <list>
 
-namespace BitmapGraphics
+namespace Framework
 {
     class Bitmap
     {

@@ -61,19 +61,19 @@ TEST(ReadScene, SceneReader)
             {
                 if (iGraphic == 0)
                 {
-                    CHECK_EQUAL(VG::Point(0, 0), (*graphic).getPlacementPoint());
-                    auto vg = (*graphic).getGraphic();
-                    CHECK_EQUAL(true, vg.isClosed());
-                    CHECK_EQUAL(3, vg.getPointCount());
-                    CHECK_EQUAL(VG::Point(1, 2), vg.getPoint(0));
-                    CHECK_EQUAL(VG::Point(3, 4), vg.getPoint(1));
-                    CHECK_EQUAL(VG::Point(5, 6), vg.getPoint(2));
+                    CHECK_EQUAL(Framework::Point(0, 0), (*graphic).getPlacementPoint());
+                    auto Framework = (*graphic).getGraphic();
+                    CHECK_EQUAL(true, Framework.isClosed());
+                    CHECK_EQUAL(3, Framework.getPointCount());
+                    CHECK_EQUAL(Framework::Point(1, 2), Framework.getPoint(0));
+                    CHECK_EQUAL(Framework::Point(3, 4), Framework.getPoint(1));
+                    CHECK_EQUAL(Framework::Point(5, 6), Framework.getPoint(2));
                 }
                 else if (iGraphic == 1)
                 {
-                    CHECK_EQUAL(VG::Point(700, 0), (*graphic).getPlacementPoint());
-                    auto vg = (*graphic).getGraphic();
-                    CHECK_EQUAL(false, vg.isClosed());
+                    CHECK_EQUAL(Framework::Point(700, 0), (*graphic).getPlacementPoint());
+                    auto Framework = (*graphic).getGraphic();
+                    CHECK_EQUAL(false, Framework.isClosed());
                 }
             }
 

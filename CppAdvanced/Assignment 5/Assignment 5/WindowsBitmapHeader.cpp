@@ -2,7 +2,7 @@
 #include "VerifyEquality.h"
 #include <string>
 
-namespace BitmapGraphics
+namespace Framework
 {
 	// File header fields
 	const Binary::Byte WindowsBitmapHeader::firstIdentifier{ 'B' };

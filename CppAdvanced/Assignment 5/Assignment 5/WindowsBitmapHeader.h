@@ -5,7 +5,7 @@
 #include "Word.h"
 #include <istream>
 
-namespace BitmapGraphics
+namespace Framework
 {
 	class WindowsBitmapHeader
 	{

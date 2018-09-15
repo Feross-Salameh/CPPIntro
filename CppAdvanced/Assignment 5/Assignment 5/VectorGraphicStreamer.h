@@ -3,7 +3,7 @@
 #include "VectorGraphic.h"
 #include <iosfwd>
 
-namespace VG
+namespace Framework
 {
     
     class VectorGraphicStreamer
@@ -11,7 +11,7 @@ namespace VG
     public:
         static VectorGraphic fromXml(std::istream& xmlSourceStream);
         
-        static void toXml(const VectorGraphic& vg,
+        static void toXml(const VectorGraphic& Framework,
                           std::ostream& os);
     };
     

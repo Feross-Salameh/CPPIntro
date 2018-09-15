@@ -2,7 +2,7 @@
 
 #include "Byte.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
     class Color
     {

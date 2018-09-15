@@ -2,7 +2,7 @@
 
 #include "IBitmapIterator.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
     class BitmapIteratorDecorator : public IBitmapIterator
     {

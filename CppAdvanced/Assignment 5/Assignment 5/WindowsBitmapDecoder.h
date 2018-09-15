@@ -3,7 +3,7 @@
 #include "IBitmapDecoder.h"
 #include "Bitmap.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
     class WindowsBitmapDecoder: public IBitmapDecoder
     {

@@ -2,7 +2,7 @@
 #include "BitmapIterator.h"
 #include <memory>
 
-namespace BitmapGraphics
+namespace Framework
 {
 
 	Bitmap::ScanLineIterator Bitmap::begin()

@@ -7,7 +7,7 @@
 //
 #pragma once
 
-namespace BitmapGraphics
+namespace Framework
 {
 	const std::string WindowsBitmapMimeType{ "image/x-ms-bmp" };
 

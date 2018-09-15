@@ -54,9 +54,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Parse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ParseTest.cpp">
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
@@ -159,14 +156,8 @@
     <ClCompile Include="SceneTest.cpp">
       <Filter>Source Files\Tests</Filter>
     </ClCompile>
-    <ClCompile Include="CodecLibrary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Element.cpp">
       <Filter>Source Files\VectorGraphic\XML</Filter>
-    </ClCompile>
-    <ClCompile Include="SquareStroke.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Color.cpp">
       <Filter>Source Files\Data Storing</Filter>
@@ -174,14 +165,14 @@
     <ClCompile Include="tinyxml2.cpp">
       <Filter>Source Files\3rd Party Tools</Filter>
     </ClCompile>
+    <ClCompile Include="Parse.cpp">
+      <Filter>Source Files\3rd Party Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CodecLibrary.cpp">
+      <Filter>Source Files\Bitmap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Parse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CodecLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">
       <Filter>Header Files\3rd Party Tools\CppUnitLite</Filter>
     </ClInclude>
@@ -275,21 +266,6 @@
     <ClInclude Include="Element.h">
       <Filter>Header Files\VectorGraphic\XML</Filter>
     </ClInclude>
-    <ClInclude Include="IProjecter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ICanvas.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IStroke.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IPen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SquareStroke.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="narrow_cast.h">
       <Filter>Header Files\Data Storing</Filter>
     </ClInclude>
@@ -313,6 +289,12 @@
     </ClInclude>
     <ClInclude Include="tinyxml2.h">
       <Filter>Header Files\3rd Party Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Parse.h">
+      <Filter>Header Files\3rd Party Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CodecLibrary.h">
+      <Filter>Header Files\Bitmap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

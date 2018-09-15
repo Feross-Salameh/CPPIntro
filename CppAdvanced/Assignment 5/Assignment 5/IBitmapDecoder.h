@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-namespace BitmapGraphics
+namespace Framework
 {
 	class BitmapIteratorDecorator;
 	class IBitmapDecoder;

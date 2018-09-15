@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Point.h"
-#include "IStroke.h"
+//#include "IStroke.h"
 
 #include <vector>
 
-namespace VG
+namespace Framework
 {
     using Points = std::vector<Point>;
     
@@ -43,11 +43,11 @@ namespace VG
         bool operator==(const VectorGraphic& rhs) const;
         bool operator!=(const VectorGraphic& rhs) const;
         
-		void setPenStroke(HStroke& newPenStroke) { myPenStroke = std::move(newPenStroke); }
+		//void setPenStroke(HStroke& newPenStroke) { myPenStroke = std::move(newPenStroke); }
 
     private:
         Points myPath;
-		HStroke myPenStroke;
+		//HStroke myPenStroke;
         enum class ShapeStyle { Open, Closed } myShapeStyle;
     };
     

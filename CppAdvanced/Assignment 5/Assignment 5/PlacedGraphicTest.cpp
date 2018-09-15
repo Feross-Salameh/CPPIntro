@@ -4,20 +4,20 @@
 
 TEST(ctor, PlacedGraphic)
 {
-    VG::VectorGraphic vg;
-	Framework::PlacedGraphic pg({ 44, 55 }, vg);
+    Framework::VectorGraphic Framework;
+	Framework::PlacedGraphic pg({ 44, 55 }, Framework);
 
-	VG::Point expected{ 44, 55 };
+	Framework::Point expected{ 44, 55 };
     CHECK_EQUAL(expected, pg.getPlacementPoint());
-    CHECK(vg == pg.getGraphic());
+    CHECK(Framework == pg.getGraphic());
 }
 
 TEST(copyCtor, PlacedGrapic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1, 1 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1, 1 });
 
-	Framework::PlacedGraphic pg({ 2,2 }, vg);
+	Framework::PlacedGraphic pg({ 2,2 }, Framework);
 
 	Framework::PlacedGraphic pg2{ pg };
 
@@ -27,14 +27,14 @@ TEST(copyCtor, PlacedGrapic)
 
 TEST(moveCtor, PlacedGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1, 1 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1, 1 });
 
-	Framework::PlacedGraphic pg({ 2,2 }, vg);
+	Framework::PlacedGraphic pg({ 2,2 }, Framework);
 
 	Framework::PlacedGraphic pg2{ std::move(pg) };
 
-	VG::Point expected{ 2,2 };
+	Framework::Point expected{ 2,2 };
 
 	CHECK(expected == pg2.getPlacementPoint());
 	CHECK(pg2.getGraphic().getPointCount() == 1);
@@ -43,10 +43,10 @@ TEST(moveCtor, PlacedGraphic)
 
 TEST(copyAssign, PlacedGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1, 1 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1, 1 });
 
-	Framework::PlacedGraphic pg({ 2,2 }, vg);
+	Framework::PlacedGraphic pg({ 2,2 }, Framework);
 
 	Framework::PlacedGraphic pg2;
 	pg2 = pg;
@@ -57,13 +57,13 @@ TEST(copyAssign, PlacedGraphic)
 
 TEST(moveAssign, PlacedGraphic)
 {
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1, 1 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1, 1 });
 
 	Framework::PlacedGraphic pg;
-	pg = Framework::PlacedGraphic({ 2,2 }, vg);
+	pg = Framework::PlacedGraphic({ 2,2 }, Framework);
 	
-	VG::Point expected{ 2,2 };
+	Framework::Point expected{ 2,2 };
 
 	CHECK(expected == pg.getPlacementPoint());
 	CHECK(pg.getGraphic().getPointCount() == 1);
@@ -72,41 +72,41 @@ TEST(moveAssign, PlacedGraphic)
 TEST(setPlacementPointRValue, PlacedGraphic)
 {
     Framework::PlacedGraphic graphic;
-    graphic.setPlacementPoint(VG::Point(44, 55));
+    graphic.setPlacementPoint(Framework::Point(44, 55));
 
-    VG::Point expected(44, 55);
+    Framework::Point expected(44, 55);
     CHECK_EQUAL(expected, graphic.getPlacementPoint());
 }
 
 TEST(setPlacementPointLValue, PlacedGraphic)
 {
 	Framework::PlacedGraphic graphic;
-	VG::Point p{ 44, 55 };
+	Framework::Point p{ 44, 55 };
 	graphic.setPlacementPoint(p);
 
-	VG::Point expected{ 44, 55 };
+	Framework::Point expected{ 44, 55 };
 	CHECK_EQUAL(expected, graphic.getPlacementPoint());
 }
 
 TEST(setGraphicLValue_getGraphic, PlacedGraphic)
 {
     Framework::PlacedGraphic pg;
-    VG::VectorGraphic vg;
-    pg.setGraphic(vg);
+    Framework::VectorGraphic Framework;
+    pg.setGraphic(Framework);
 
-    CHECK(vg == pg.getGraphic());
+    CHECK(Framework == pg.getGraphic());
 }
 
 TEST(setGraphicRValue_getGraphic, PlacedGraphic)
 {
 	Framework::PlacedGraphic pg;
-	VG::VectorGraphic vg;
-	vg.addPoint(VG::Point{ 1,2 });
+	Framework::VectorGraphic Framework;
+	Framework.addPoint(Framework::Point{ 1,2 });
 
-	VG::VectorGraphic vg2{ vg };
+	Framework::VectorGraphic Framework2{ Framework };
 
-	pg.setGraphic(std::move(vg));
+	pg.setGraphic(std::move(Framework));
 
-	CHECK(vg2 == pg.getGraphic());
-	CHECK(vg.getPointCount() == 0);
+	CHECK(Framework2 == pg.getGraphic());
+	CHECK(Framework.getPointCount() == 0);
 }

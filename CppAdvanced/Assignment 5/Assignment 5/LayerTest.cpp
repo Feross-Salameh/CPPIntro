@@ -59,11 +59,11 @@ TEST(pushBack, Layer)
 {
     Framework::Layer layer{"Mountains"};
 
-	Framework::PlacedGraphic pg({ 11, 11 }, VG::VectorGraphic());
+	Framework::PlacedGraphic pg({ 11, 11 }, Framework::VectorGraphic());
 
     layer.pushBack(pg);
-    layer.pushBack(Framework::PlacedGraphic(VG::Point(22, 22), VG::VectorGraphic()));
-    layer.pushBack(Framework::PlacedGraphic(VG::Point(33, 33), VG::VectorGraphic()));
+    layer.pushBack(Framework::PlacedGraphic(Framework::Point(22, 22), Framework::VectorGraphic()));
+    layer.pushBack(Framework::PlacedGraphic(Framework::Point(33, 33), Framework::VectorGraphic()));
 
     int numberOfGraphics{0};
     for (auto pos = layer.begin(); pos != layer.end(); ++pos)
@@ -79,11 +79,11 @@ TEST(remove, Layer)
 {
     Framework::Layer layer{"Air"};
 
-    layer.pushBack(Framework::PlacedGraphic(VG::Point(11, 11), VG::VectorGraphic()));
-    layer.pushBack(Framework::PlacedGraphic(VG::Point(22, 22), VG::VectorGraphic()));
-    layer.pushBack(Framework::PlacedGraphic(VG::Point(33, 33), VG::VectorGraphic()));
+    layer.pushBack(Framework::PlacedGraphic(Framework::Point(11, 11), Framework::VectorGraphic()));
+    layer.pushBack(Framework::PlacedGraphic(Framework::Point(22, 22), Framework::VectorGraphic()));
+    layer.pushBack(Framework::PlacedGraphic(Framework::Point(33, 33), Framework::VectorGraphic()));
 
-    layer.remove(Framework::PlacedGraphic(VG::Point(33, 33), VG::VectorGraphic()));
+    layer.remove(Framework::PlacedGraphic(Framework::Point(33, 33), Framework::VectorGraphic()));
 
     int numberOfGraphics{0};
     for (auto pos = layer.begin(); pos != layer.end(); ++pos)

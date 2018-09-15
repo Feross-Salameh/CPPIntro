@@ -41,7 +41,7 @@ namespace Framework
                 
                 for (size_t i = 0; i < vectorGraphic.getPointCount(); ++i)
                 {
-                    VG::Point p = vectorGraphic.getPoint(i);
+                    Framework::Point p = vectorGraphic.getPoint(i);
                     Xml::HElement pointElement(vectorGraphicElement->appendChild("Point"));
                     pointElement->setAttribute("x", to_string(p.getX()));
                     pointElement->setAttribute("y", to_string(p.getY()));

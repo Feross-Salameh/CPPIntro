@@ -115,7 +115,7 @@ namespace
 		return std::move(attrs);
 	}
 
-	VG::VectorGraphic parseVectorGraphic(deque<string>& theNodes)
+	Framework::VectorGraphic parseVectorGraphic(deque<string>& theNodes)
 	{
 		testValidVectorGraphicXML(theNodes);
 
@@ -124,7 +124,7 @@ namespace
 		std::smatch match;
 		std::regex_search(theNodes.front(), match, attribute);
 
-		VG::VectorGraphic graphic;		
+		Framework::VectorGraphic graphic;		
 		
 		testValidVectorGraphicAttributes(match);
 		auto strstr = stringstream(match[2].str());
@@ -143,7 +143,7 @@ namespace
 			std::map<string, int> coords{ getPointAttrs(theNodes.front()) };
 			theNodes.pop_front();
 
-			graphic.addPoint(VG::Point(coords.at("x"), coords.at("y")));
+			graphic.addPoint(Framework::Point(coords.at("x"), coords.at("y")));
 		}
 
 		return std::move(graphic);
@@ -151,27 +151,27 @@ namespace
 }
 
 
-namespace VG
+namespace Framework
 {
 
 	VectorGraphic VectorGraphicStreamer::fromXml(std::istream& xml)
 	{
 		deque<string> nodes{ splitNodes(xml) };		
 
-		VectorGraphic vg{ parseVectorGraphic(nodes) };
+		VectorGraphic Framework{ parseVectorGraphic(nodes) };
 
 
-		return std::move(vg);
+		return std::move(Framework);
 	}
 
-	void VectorGraphicStreamer::toXml(const VectorGraphic& vg,
+	void VectorGraphicStreamer::toXml(const VectorGraphic& Framework,
 	                                    std::ostream& os)
 	{
-		os << "<VectorGraphic closed=\"" << std::boolalpha << vg.isClosed() << "\">" << std::endl;        
+		os << "<VectorGraphic closed=\"" << std::boolalpha << Framework.isClosed() << "\">" << std::endl;        
 	        
-	    for (auto i = 0U; i < vg.getPointCount(); ++i)
+	    for (auto i = 0U; i < Framework.getPointCount(); ++i)
 	    {
-	        auto& p = vg.getPoint(i);
+	        auto& p = Framework.getPoint(i);
 	        os << "<Point x=\"" << p.getX() << "\" y=\"" << p.getY() << "\"/>" << std::endl;
 	    }
 	        

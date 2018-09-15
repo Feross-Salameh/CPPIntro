@@ -1,6 +1,6 @@
 #include "BitmapIterator.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
 	BitmapIterator::BitmapIterator(Bitmap& bitmap) :
 		myBitmap{ bitmap },

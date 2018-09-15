@@ -15,25 +15,25 @@ namespace
         return value;
     }
     
-    VG::VectorGraphic readVectorGraphic(const Xml::HElement vgElement)
+    Framework::VectorGraphic readVectorGraphic(const Xml::HElement FrameworkElement)
     {
-        VG::VectorGraphic vg;
+        Framework::VectorGraphic Framework;
         
-        std::string closed = vgElement->getAttribute("closed");
+        std::string closed = FrameworkElement->getAttribute("closed");
         if (closed == "true")
         {
-            vg.closeShape();
+            Framework.closeShape();
         }
         else if (closed == "false")
         {
-            vg.openShape();
+            Framework.openShape();
         }
         else
         {
             throw std::runtime_error("Invalid VectorGraphic attribute");
         }
         
-        Xml::ElementCollection points = vgElement->getChildElements();
+        Xml::ElementCollection points = FrameworkElement->getChildElements();
         Xml::ElementCollection::const_iterator p;
         for (p = points.begin(); p != points.end(); ++p)
         {
@@ -41,7 +41,7 @@ namespace
 			{
 				int x = toInt((*p)->getAttribute("x"));
 				int y = toInt((*p)->getAttribute("y"));
-				vg.addPoint(VG::Point(x, y));
+				Framework.addPoint(Framework::Point(x, y));
 			}
 			else if ((*p)->getName() == "Stroke")
 			{
@@ -49,7 +49,7 @@ namespace
 			}
         }
         
-        return vg;
+        return Framework;
     }
     
     void readGraphic(Framework::Scene& scene,
@@ -71,14 +71,14 @@ namespace
             throw std::runtime_error("PlacedGraphic out of bounds");
         }
         
-        pg.setPlacementPoint(VG::Point(x, y));
+        pg.setPlacementPoint(Framework::Point(x, y));
         
         Xml::ElementCollection vectorGraphics = graphicElement->getChildElements();
-        Xml::ElementCollection::const_iterator vgElement;
-        for (vgElement = vectorGraphics.begin(); vgElement != vectorGraphics.end(); ++vgElement)
+        Xml::ElementCollection::const_iterator FrameworkElement;
+        for (FrameworkElement = vectorGraphics.begin(); FrameworkElement != vectorGraphics.end(); ++FrameworkElement)
         {
             // TODO - assert - there should only be one of these
-            pg.setGraphic(readVectorGraphic(*vgElement));
+            pg.setGraphic(readVectorGraphic(*FrameworkElement));
         }
         
         layer.pushBack(pg);

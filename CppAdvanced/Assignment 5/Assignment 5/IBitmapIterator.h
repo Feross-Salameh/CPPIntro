@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace BitmapGraphics
+namespace Framework
 {
     class Color;
     

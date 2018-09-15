@@ -2,7 +2,7 @@
 #include "WindowsBitmapHeader.h"
 #include <fstream>
 
-using namespace BitmapGraphics;
+using namespace Framework;
 
 TEST(FileHeaderTest, WindowsBitmapHeader)
 {

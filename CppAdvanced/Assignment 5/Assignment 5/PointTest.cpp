@@ -12,50 +12,50 @@
 
 TEST(equality, Point)
 {
-    CHECK_EQUAL(VG::Point(1, 2), VG::Point(1, 2));
+    CHECK_EQUAL(Framework::Point(1, 2), Framework::Point(1, 2));
 }
 
 TEST(copyCtor, Point)
 {
-	VG::Point p1{ 2, 2 };
+	Framework::Point p1{ 2, 2 };
 
-	VG::Point p2{ p1 };
+	Framework::Point p2{ p1 };
 
 	CHECK_EQUAL(p1, p2);
 }
 
 TEST(copyAssign, Point)
 {
-	VG::Point p1{ 2, 2 };
-	VG::Point p2 = p1;
+	Framework::Point p1{ 2, 2 };
+	Framework::Point p2 = p1;
 
 	CHECK_EQUAL(p1, p2);
 }
 
 TEST(moveCtor, Point)
 {
-	VG::Point p1{ 2, 2 };
-	VG::Point p2(std::move(p1));
+	Framework::Point p1{ 2, 2 };
+	Framework::Point p2(std::move(p1));
 
-	CHECK_EQUAL(p2, VG::Point(2, 2));
+	CHECK_EQUAL(p2, Framework::Point(2, 2));
 }
 
 TEST(moveAssign, Point)
 {
-	VG::Point p1{ 2, 2 };
-	VG::Point p2 = std::move(p1);
+	Framework::Point p1{ 2, 2 };
+	Framework::Point p2 = std::move(p1);
 
-	CHECK_EQUAL(p2, VG::Point(2, 2));
+	CHECK_EQUAL(p2, Framework::Point(2, 2));
 }
 
 TEST(inequality, Point)
 {
-    CHECK(VG::Point(1, 2) != VG::Point(3, 4));
+    CHECK(Framework::Point(1, 2) != Framework::Point(3, 4));
 }
 
 TEST(constexprPoint, Point)
 {
-    constexpr int i = VG::Point{4, 5}.getX();
+    constexpr int i = Framework::Point{4, 5}.getX();
     
     CHECK_EQUAL(i, 4);
 }

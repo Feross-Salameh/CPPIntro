@@ -5,7 +5,7 @@
 #include <list>
 #include <string>
 
-namespace BitmapGraphics
+namespace Framework
 {
 	class CodecLibrary
 	{

@@ -1,7 +1,7 @@
 #include "Point.h"
 #include <iostream>
 
-namespace VG
+namespace Framework
 {
     
     std::ostream& operator<<(std::ostream& os, const Point& p)

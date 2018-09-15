@@ -9,7 +9,7 @@ namespace
 	std::istringstream nullStream{};
 }
 
-namespace BitmapGraphics
+namespace Framework
 {
 	// This constructor is used to create the prototype.
 	// Initialize mySourceStream to an empty stringstream,

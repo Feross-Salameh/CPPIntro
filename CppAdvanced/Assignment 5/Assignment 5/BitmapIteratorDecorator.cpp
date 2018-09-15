@@ -1,7 +1,7 @@
 #include "BitmapIteratorDecorator.h"
 #include "Color.h"
 
-namespace BitmapGraphics
+namespace Framework
 {
     BitmapIteratorDecorator::BitmapIteratorDecorator(HBitmapIterator originalIterator) :
     myOriginalIterator{std::move(originalIterator)}

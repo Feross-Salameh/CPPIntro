@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-namespace VG
+namespace Framework
 {
     VectorGraphic::VectorGraphic() :
     myShapeStyle{ShapeStyle::Closed}
