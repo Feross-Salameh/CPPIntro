@@ -1,5 +1,4 @@
 #include "VectorGraphic.h"
-
 #include <algorithm>
 
 namespace Framework

@@ -1,8 +1,7 @@
 #pragma once
 #include "Point.h"
 #include "Color.h"
-#include "BitmapIterator.h"
-
+#include "IBitmapIterator.h"
 namespace Framework
 {
 	class ICanvas
@@ -12,7 +11,7 @@ namespace Framework
 		virtual Color getPixelColor(Point const& location) const = 0;
 		virtual int getWidth() const = 0;
 		virtual int getHeight() const = 0;
-		virtual HBitmapIterator createBitmapIterator() const = 0;
+		virtual HBitmapIterator createBitmapIterator()  = 0;
 	};
 
 	using HCanvas = std::unique_ptr<ICanvas>;

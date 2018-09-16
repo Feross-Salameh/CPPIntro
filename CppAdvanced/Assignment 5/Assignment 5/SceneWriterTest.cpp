@@ -13,6 +13,7 @@ const char* const TestXml = STR(
   <Layer alias="sky">
     <PlacedGraphic x="86" y="99">
       <VectorGraphic closed="true">
+		<Stroke tip = "slash" size = "7" color = "FF0000" />
         <Point x="1" y="2" />
         <Point x="3" y="4" />
         <Point x="5" y="6" />
@@ -20,6 +21,7 @@ const char* const TestXml = STR(
     </PlacedGraphic>
     <PlacedGraphic x="700" y="0">
       <VectorGraphic closed="false">
+		<Stroke tip = "square" size = "5" color = "00FF00" />
         <Point x="7" y="8" />
         <Point x="9" y="10" />
         <Point x="11" y="12" />

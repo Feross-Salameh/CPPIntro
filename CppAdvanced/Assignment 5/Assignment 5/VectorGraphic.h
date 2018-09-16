@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Point.h"
-//#include "IStroke.h"
-
+#include "IStroke.h"
+#include "ICanvas.h"
 #include <vector>
 
 namespace Framework
@@ -43,11 +43,10 @@ namespace Framework
         bool operator==(const VectorGraphic& rhs) const;
         bool operator!=(const VectorGraphic& rhs) const;
         
-		//void setPenStroke(HStroke& newPenStroke) { myPenStroke = std::move(newPenStroke); }
-
+		void draw(HCanvas& canvas, const Point& offset);
     private:
         Points myPath;
-		//HStroke myPenStroke;
+		IStroke* myPenStroke;
         enum class ShapeStyle { Open, Closed } myShapeStyle;
     };
     
