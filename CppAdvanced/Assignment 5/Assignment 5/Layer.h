@@ -1,6 +1,7 @@
 #pragma once
 
 #include "PlacedGraphic.h"
+#include "ICanvas.h"
 #include <list>
 #include <string>
 
@@ -35,6 +36,9 @@ namespace Framework
         
         bool operator==(const Layer& rhs) const;
         bool operator!=(const Layer& rhs) const;
+
+		void draw(HCanvas& canvas);
+
         
     private:
         PlacedGraphicCollection myGraphics;

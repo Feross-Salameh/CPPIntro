@@ -4,7 +4,7 @@
 namespace Framework
 {
     VectorGraphic::VectorGraphic() :
-    myShapeStyle{ShapeStyle::Closed}
+    myShapeStyle{ShapeStyle::Closed} , myPenStroke{nullptr}
     {
     }
     

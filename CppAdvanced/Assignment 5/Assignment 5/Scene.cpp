@@ -33,5 +33,13 @@ namespace Framework
     {
         return myHeight;
     }
+
+	void Scene::draw(HCanvas & canvas)
+	{
+		for (auto layer : myLayers)
+		{
+			layer.draw(canvas);
+		}
+	}
     
 }

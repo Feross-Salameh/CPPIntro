@@ -1,6 +1,6 @@
 #pragma once
 #include "Layer.h"
-
+#include "ICanvas.h"
 #include <list>
 
 namespace Framework
@@ -32,6 +32,8 @@ namespace Framework
         
         int getWidth() const;
         int getHeight() const;
+
+		void draw(HCanvas& canvas);
         
     private:
         LayerCollection myLayers;

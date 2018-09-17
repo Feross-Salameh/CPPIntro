@@ -17,8 +17,8 @@ namespace Framework
 		VectorGraphic(const VectorGraphic& other) = default;
 		VectorGraphic(VectorGraphic&& other) = default;
 
-		VectorGraphic& operator=(const VectorGraphic&) = default;
-		VectorGraphic& operator=(VectorGraphic&&) = default;
+		VectorGraphic& operator=(const VectorGraphic& other) = default;
+		VectorGraphic& operator=(VectorGraphic&& other) = default;
 
 		template<class C> void addPoint(C&& p)
 		{

@@ -189,6 +189,9 @@
     <ClCompile Include="SquareStroke.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SquarePen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CppUnitLite\Failure.h">
@@ -336,6 +339,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IPen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SquarePen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

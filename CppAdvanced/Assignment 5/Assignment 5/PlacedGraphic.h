@@ -2,7 +2,7 @@
 
 #include "Point.h"
 #include "VectorGraphic.h"
-
+#include "ICanvas.h"
 namespace Framework
 {
     
@@ -33,7 +33,7 @@ namespace Framework
 		}
 
         const Framework::VectorGraphic& getGraphic() const;
-        
+		void draw(HCanvas& canvas);
     private:
         Framework::Point myPlacementPoint;
         Framework::VectorGraphic myGraphic;

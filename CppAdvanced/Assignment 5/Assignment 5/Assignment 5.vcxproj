@@ -134,6 +134,7 @@
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="LayerTest.cpp" />
     <ClCompile Include="LineIterator.cpp" />
+    <ClCompile Include="SquarePen.cpp" />
     <ClCompile Include="SquareStroke.cpp" />
     <ClCompile Include="VectorGraphicTestNew.cpp" />
     <ClCompile Include="Parse.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="SceneReader.h" />
     <ClInclude Include="SceneWriter.h" />
     <ClInclude Include="SizedWord.h" />
+    <ClInclude Include="SquarePen.h" />
     <ClInclude Include="SquareStroke.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="VectorGraphic.h" />
