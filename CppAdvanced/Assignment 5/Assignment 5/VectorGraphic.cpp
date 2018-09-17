@@ -1,10 +1,11 @@
 #include "VectorGraphic.h"
+#include "SquareStroke.h"
 #include <algorithm>
 
 namespace Framework
 {
     VectorGraphic::VectorGraphic() :
-    myShapeStyle{ShapeStyle::Closed} , myPenStroke{nullptr}
+    myShapeStyle{ShapeStyle::Closed} 
     {
     }
     
@@ -90,4 +91,21 @@ namespace Framework
     {
         return ! (*this == rhs);
     }
+	void VectorGraphic::draw(HCanvas & canvas, const Point & offset)
+	{
+	}
+	HStroke VectorGraphic::generateStroke()
+	{
+		if (myStrokeTip == "square")
+		{
+			SquareStroke sq;
+			sq.setSize(myStrokeSize);
+			sq.setColor(myStrokeColor);
+			return std::make_unique<SquareStroke>(sq);
+		}
+		else
+		{
+			return nullptr;
+		}
+	}
 }

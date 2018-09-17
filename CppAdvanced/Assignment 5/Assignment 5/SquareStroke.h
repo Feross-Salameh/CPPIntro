@@ -16,7 +16,7 @@ namespace Framework
 		SquareStroke& operator=(SquareStroke const&) = default;
 		SquareStroke& operator=(SquareStroke &&) = default;
 
-		SquareStroke(int size, Color color) :mySize{ size }, myColor{ color } {}
+		SquareStroke(int size, Color color) : mySize{ size }, myColor{ color } {}
 
 		virtual void setSize(int size) { mySize = size; }
 		virtual int getSize() const { return mySize; }

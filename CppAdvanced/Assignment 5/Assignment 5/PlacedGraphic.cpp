@@ -24,6 +24,11 @@ namespace Framework
     {
         return myGraphic;
     }
+
+	void PlacedGraphic::draw(HCanvas & canvas)
+	{
+		myGraphic.draw(canvas, myPlacementPoint);
+	}
     
     bool operator==(const PlacedGraphic& lhs, const PlacedGraphic& rhs)
     {

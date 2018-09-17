@@ -37,5 +37,13 @@ namespace Framework
     {
         return !operator==(rhs);
     }
+
+	void Layer::draw(HCanvas & canvas)
+	{
+		for (auto placedGraphics : myGraphics)
+		{
+			placedGraphics.draw(canvas);
+		}
+	}
     
 }

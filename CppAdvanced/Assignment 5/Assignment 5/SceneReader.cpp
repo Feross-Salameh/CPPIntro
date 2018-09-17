@@ -2,8 +2,10 @@
 #include "Scene.h"
 #include "XmlInterfaces.h"
 #include "VectorGraphic.h"
+#include "Color.h"
+#include "Byte.h"
 #include <sstream>
-
+#include <stdlib.h>
 namespace
 {
     int toInt(const std::string& s)
@@ -15,25 +17,25 @@ namespace
         return value;
     }
     
-    Framework::VectorGraphic readVectorGraphic(const Xml::HElement FrameworkElement)
+    Framework::VectorGraphic readVectorGraphic(const Xml::HElement VGElement)
     {
-        Framework::VectorGraphic Framework;
+		Framework::VectorGraphic VG;
         
-        std::string closed = FrameworkElement->getAttribute("closed");
+        std::string closed = VGElement->getAttribute("closed");
         if (closed == "true")
         {
-            Framework.closeShape();
+            VG.closeShape();
         }
         else if (closed == "false")
         {
-            Framework.openShape();
+            VG.openShape();
         }
         else
         {
             throw std::runtime_error("Invalid VectorGraphic attribute");
         }
         
-        Xml::ElementCollection points = FrameworkElement->getChildElements();
+        Xml::ElementCollection points = VGElement->getChildElements();
         Xml::ElementCollection::const_iterator p;
         for (p = points.begin(); p != points.end(); ++p)
         {
@@ -41,15 +43,27 @@ namespace
 			{
 				int x = toInt((*p)->getAttribute("x"));
 				int y = toInt((*p)->getAttribute("y"));
-				Framework.addPoint(Framework::Point(x, y));
+				VG.addPoint(Framework::Point(x, y));
 			}
 			else if ((*p)->getName() == "Stroke")
 			{
-				// TODO: finish adding reader for Pen
+				std::string shape = (*p)->getAttribute("tip");
+				int size = toInt((*p)->getAttribute("size"));
+				int red, green, blue;
+				std::string colorStr = (*p)->getAttribute("color");
+				long colorNum = strtol(colorStr.c_str(), NULL, 16);
+				red = (colorNum & 0xFF0000) >> 16;
+				green = (colorNum & 0xFF00) >> 8;
+				blue = (colorNum & 0xFF);
+				
+				VG.setStrokeTip(shape);
+				VG.setStrokeSize(size);
+				VG.setStrokeColor(Framework::Color(Binary::Byte(red), Binary::Byte(green), Binary::Byte(blue)));
+
 			}
         }
         
-        return Framework;
+        return VG;
     }
     
     void readGraphic(Framework::Scene& scene,

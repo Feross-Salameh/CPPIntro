@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Point.h"
+#include "Color.h"
 #include "IStroke.h"
 #include "ICanvas.h"
 #include <vector>
@@ -43,11 +44,24 @@ namespace Framework
         bool operator==(const VectorGraphic& rhs) const;
         bool operator!=(const VectorGraphic& rhs) const;
         
+		std::string getStrokeTip() const { return myStrokeTip; }
+		void setStrokeTip(std::string strokeTip) { myStrokeTip = strokeTip; }
+
+		Color getStrokeColor() const { return myStrokeColor; }
+		void setStrokeColor(Color strokeColor) { myStrokeColor = strokeColor; }
+
+		int getStrokeSize() { return myStrokeSize; }
+		void setStrokeSize(int strokeSize) { myStrokeSize = strokeSize; }
+
 		void draw(HCanvas& canvas, const Point& offset);
     private:
         Points myPath;
-		IStroke* myPenStroke;
+		std::string myStrokeTip;
+		Color myStrokeColor;
+		int myStrokeSize;
         enum class ShapeStyle { Open, Closed } myShapeStyle;
+
+		HStroke generateStroke();
     };
     
 }
